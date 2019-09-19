@@ -24,7 +24,4 @@ Instructions:
 	-Must enter 1 as a subscript, cannot leave it out!
 	-No parentheses support
 	-When entering an atomic structure such as C6H12O6 you must enter it as C6H6H6O6
-		or any other combination, becuase subscripts cannot exceed 9!
-
-Any comments concerns or bugs? pm me, zeldaking at cemtech.net
-
+		or any other combination, becuase subscripts cannot exceed 9.
