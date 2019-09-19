@@ -1,0 +1,1 @@
+-This is a collection of projects I've worked on from 2011 to present on the Ti-84+ line of graphing calulators.
