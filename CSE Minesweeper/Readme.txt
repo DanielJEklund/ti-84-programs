@@ -58,4 +58,4 @@ questions or concers, ideas and suggestions
 	  -zeldaking@cemetech.net
 	  -zeldaking@omnimaga.org
 	Email: (No spamming)
-	  -dannycraze@gmail.com
+	  -daniel.g.thacker@gmail.com
