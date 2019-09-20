@@ -1,0 +1,102 @@
+ClrHome
+ClrDraw
+AxesOff
+PlotsOff 
+FnOff 
+ZStandard
+ZInteger
+" invertedequal|NO<>^|v[|>][<|]downarrowuparrowÃ?|Omega->Str1
+16*8->dim(L1
+1->A
+Text(~1,1,1,"CHOOSE TEMPLATE
+Line(~35,15,~10,15
+Line(~35,14,~10,14
+Line(~35,13,~35,1
+Line(~34,1,~34,13
+Line(~11,13,~11,1
+Line(~10,13,~10,1
+Line(~33,1,~12,1
+Line(~33,2,~12,2
+Line(5,15,30,15
+Line(5,14,5,2
+Line(5,1,30,1
+Line(30,2,30,14
+Text(9,13,"Border
+Text(9,55,"Blank
+22->B
+Text(~1,35,BA,"^
+Repeat K=21
+	getKey->K
+	If K=24 or K=26:Text(~1,35,BA," 
+	If K=24 and A!=1:Then
+	1->A:22->B:End
+	If K=26 and A!=2:Then
+	2->A:32->B:End
+	Text(~1,35,BA,"^
+End
+If A=1
+{2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2}->L1
+If A=2
+{1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1}->L1
+ClrDraw
+If A=1:Then
+	For(N,1,8
+		For(M,1,16
+			Output(N,M,sub(Str1,L1(16N+M-16),1
+	End:End
+End
+0->A
+1->Y:1->X
+Repeat K=45 or K=105
+	getKey->K
+	If A=0:Then
+		Output(Y,X,"X
+		15->A
+	End
+	If A!=0:A-1->A
+	If A=7:Output(Y,X,sub(Str1,L1(16Y+X-16),1
+	If K=24 or K=25 or K=26 or K=34
+	Then
+		Output(Y,X,sub(Str1,L1(16Y+X-16),1
+		0->A
+	End
+	X-(K=24 and X!=1)+(K=26 and X!=16)->X
+	Y-(K=25 and Y!=1)+(K=34 and Y!=8)->Y
+	If K=21:Then
+		ClrHome
+		Disp " CHOOSE TILE:
+		Output(2,1,Str1
+		1->B
+		Output(3,1,"^
+		Repeat K=21
+			getKey->K
+			If K=24 or K=26:Output(3,B," 
+			B-(K=24 and B!=1)+(K=26 and B!=15)->B
+			Output(3,B,"^
+		End
+		B->L1(16Y+X-16
+		ClrHome
+		For(N,1,8
+			For(M,1,16
+				If L1(16N+M-16)!=1
+				Output(N,M,sub(Str1,L1(16N+M-16),1
+		End:End
+		0->A
+	End
+End
+ClrHome
+If K=45:Then
+	DelVar Str1DelVar Str2DelVar L10->dim(L1
+End
+If K=45:Stop
+Disp " LOADING...
+" ->Str2
+For(N,1,8
+	For(M,1,16
+		Str2+sub(Str1,L1(16N+M-16),1)->Str2
+	End
+End
+ClrHome
+Str2->Str1
+DelVar Str2
+Disp " LOADED!

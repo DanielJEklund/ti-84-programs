@@ -1,0 +1,393 @@
+AxesOff
+ZStandard
+ZInteger
+PlotsOff 
+FnOff 
+ClrDraw
+ClrHome
+1->A
+Line(~29,~7,~29,~11
+Line(~28,~12,~27,~13
+Line(~26,~14,~16,~14
+Line(~15,~13,~14,~12
+Line(~28,~6,~27,~5
+Line(~26,~4,~16,~4
+Line(~15,~5,~14,~6
+Line(~25,~8,~25,~10
+Line(~17,~10,~17,~8
+Line(24,~7,~24,~7
+Line(24,~11,~24,~11
+Line(~4,~10,~4,~8
+Line(4,~8,4,~10
+Line(17,~10,17,~8
+Line(~7,~6,~6,~5
+Line(~7,~12,~6,~13
+Line(~5,~4,5,~4
+Line(~5,~14,5,~14
+Line(6,~13,7,~12
+Line(6,~5,7,~6
+Line(14,~6,15,~5
+Line(14,~12,15,~13
+Line(16,~14,26,~14
+Line(16,~4,26,~4
+Line(27,~5,28,~6
+Line(27,~13,28,~12
+Line(29,~11,29,~7
+Line(25,~8,25,~10
+Repeat A=20
+	A+1->A
+	Output(3,5,"LinkSoft
+	Output(4,4,"Productions
+	Text(~1,17,12,"  LinkSoft
+	Text(~1,25,18,"Productions
+End
+" ->Str1
+" ->Str9
+" ->Str0
+" ->Str8
+1->dim(|LDNGN
+|LDNGN(1->L
+Lbl M
+ClrDraw
+Text(~1,1,1,"-Ã?.:Dungeons:.Ã?-
+Text(~1,15,35," Play
+Text(~1,23,35,"New
+Text(~1,31,35,"????
+Text(~1,39,35,"Quit
+Horizontal ~18
+15->A
+35->B
+35->C
+35->D
+35->E
+Text(50,25,"Daniel Thacker
+Text(57,20,"Zeldaking 2012 (c)
+15->A
+0->N
+Repeat K=21
+	getKey->K
+	If K=25 or K=34:Then
+		1->N
+		Text(~1,15,35,"      
+		Text(~1,23,35,"    
+		Text(~1,31,35,"     
+		Text(~1,39,35,"     
+	End
+	A-8(K=25)+8(K=34)->A
+	If A<15:39->A
+	If A>39:15->A
+	If N:Then
+		0->N
+		If A=15:41->B
+		If A=23:41->C
+		If A=31:41->D
+		If A=39:41->E
+		Text(~1,15,B,"Play
+		Text(~1,23,C,"New
+		Text(~1,31,D,"????
+		Text(~1,39,E,"Quit
+		35->B:35->C:35->D:35->E
+	End
+	
+End
+If A=31
+Goto H
+If A=23
+Goto N
+If A=15
+Goto P
+If A=39
+Goto Q
+Lbl N
+1->L
+1->|LDNGN(1
+Lbl P
+ClrHome
+If L=0
+Then
+	Output(1,2,"No Saved File
+	Repeat getKey
+	End
+End
+If 0=|LDNGN(1
+Goto M
+Output(1,1,"-Ã?.:Dungeons:.Ã?-
+Output(2,1,"  Choose Level
+Output(5,1," 1 2 3 4 5
+1->A
+1->D
+|LDNGN(1->L
+Repeat K=21 and D<=L
+	getKey->K
+	If K=45
+	Goto M
+	If D<=L
+	Output(6,1," Unlocked | |
+	If D>L
+	Output(6,1," Locked   |Omega|
+	If K=24 or K=26
+	Output(5,A," 
+	If K=24 and A!=1
+	Then
+		If D<=11
+		A-2->A
+		If D>=11
+		A-3->A
+		D-1->D
+		0->K
+	End
+	If K=26 and A!=9 and A!=13
+	Then
+		If D<11
+		A+2->A
+		If D>10
+		A+3->A
+		D+1->D
+		0->K
+	End
+	If K=26 and D!=15
+	Then
+		If A=9 or A=13
+		Then
+			Output(5,1,"                
+			1->A
+			D+1->D
+			2->E
+			For(C,0,4
+				Output(5,E,D+C
+				If D>10
+				E+3->E
+				If D<11
+				E+2->E
+			End
+		End
+	End
+	If K=24 and A=1 and D!=1
+	Then
+		Output(5,1,"                
+		D-5->D
+		1->A
+		2->E
+		For(C,0,4
+			Output(5,E,D+C
+			If D<=10
+			E+2->E
+			If D>=11
+			E+3->E
+		End
+	End
+	Output(5,A,"[|>]
+End
+D->L
+prgmDNGLEVLS
+Lbl PL
+If K=22
+prgmDNGLEVLS
+If K=24 and "[<|]"=sub(Str1,A-1,1
+Goto L
+If K=26 and "[|>]"=sub(Str1,A+1,1
+Goto L
+If K=34 and "downarrow"=sub(Str1,A+16,1
+Goto L
+If K=25 and Y>=2 and "uparrow"=sub(Str1,A-16,1
+Goto L
+If L>12:Then
+	0->theta
+	If sub(Str1,A,1)="^":Then
+		Output(Y,X,"^
+		Y-1->Y:A-16->A
+		Output(Y,X,"Omega
+		1->theta:0->K
+	End
+	If sub(Str1,A,1)="v" and theta=0:Then
+		Output(Y,X,"v
+		Y+1->Y:A+16->A
+		Output(Y,X,"Omega
+		0->K:1->theta
+	End
+	If sub(Str1,A,1)=">" and theta=0:Then
+		Output(Y,X,">
+		X+1->X:A+1->A
+		Output(Y,X,"Omega
+		0->K:1->theta
+	End
+	If sub(Str1,A,1)="<" and theta=0:Then
+		Output(Y,X,"<
+		X-1->X:A-1->A
+		Output(Y,X,"Omega
+	0->K:End
+End
+If K=24 and X!=1
+Then
+	If sub(Str1,A-1,1)=" " or sub(Str1,A-1,1)="^" or sub(Str1,A-1,1)="v" or sub(Str1,A-1,1)=">" or sub(Str1,A-1,1)="<
+	Then
+		Output(Y,X," 
+		X-1->X
+		A-1->A
+		Output(Y,X,"Omega
+		0->K
+End:End
+If K=26 and X!=16
+Then
+	If sub(Str1,A+1,1)=" " or sub(Str1,A+1,1)="^" or sub(Str1,A+1,1)="v" or sub(Str1,A+1,1)=">" or sub(Str1,A+1,1)="<
+	Then
+		Output(Y,X," 
+		X+1->X
+		A+1->A
+		Output(Y,X,"Omega
+		0->K
+End:End
+If K=25 and Y>=2:Then
+	If sub(Str1,A-16,1)=" " or sub(Str1,A-16,1)="^" or sub(Str1,A-16,1)="v" or sub(Str1,A-16,1)=">" or sub(Str1,A-16,1)="<
+	Then
+		Output(Y,X," 
+		Y-1->Y
+		A-16->A
+		Output(Y,X,"Omega
+		0->K
+	End
+End
+If K=34 and Y!=8:Then
+	If sub(Str1,A+16,1)=" " or sub(Str1,A+16,1)="v" or sub(Str1,A+16,1)="^" or sub(Str1,A+16,1)=">" or sub(Str1,A+16,1)="<
+	Then
+		Output(Y,X," 
+		Y+1->Y
+		A+16->A
+		Output(Y,X,"Omega
+		0->K
+End:End
+getKey->K
+If K=25 and Y>=3 and sub(Str1,A-16,1)="|N
+Then
+	If sub(Str1,A-32,1)=" " or sub(Str1,A-32,1)="O
+	Then
+		sub(Str1,1,A-33)->Str9
+		sub(Str1,A-31,15)->Str0
+		sub(Str1,A-15,length(Str1)-(A-16))->Str8
+		If sub(Str1,A-32,1)=" 
+		Str9+"|N"+Str0+" "+Str8->Str1
+		If sub(Str1,A-32,1)="O
+		Str9+" "+Str0+" "+Str8->Str1
+		A-16->A
+		Y-1->Y
+		0->K
+		Output(1,1,Str1
+		Output(Y,X,"Omega
+	End
+End
+If K=34 and Y<=7 and sub(Str1,A+16,1)="|N
+Then
+	If sub(Str1,A+32,1)=" " or sub(Str1,A+32,1)="O
+	Then
+		sub(Str1,1,A+15)->Str9
+		sub(Str1,A+17,15)->Str0
+		sub(Str1,A+33,length(Str1)-(A+32)->Str8
+		If sub(Str1,A+32,1)=" 
+		Str9+" "+Str0+"|N"+Str8->Str1
+		If sub(Str1,A+32,1)="O
+		Str9+" "+Str0+" "+Str8->Str1
+		A+16->A
+		Y+1->Y
+		0->K
+		Output(1,1,Str1
+		Output(Y,X,"Omega
+	End
+End
+If K=24 and X>=2 and sub(Str1,A-1,1)="|N
+Then
+	If sub(Str1,A-2,1)=" " or sub(Str1,A-2,1)="O
+	Then
+		sub(Str1,1,A-3)->Str0
+		sub(Str1,A,length(Str1)-(A-1))->Str9
+		If sub(Str1,A-2,1)=" 
+		Str0+"|N "+Str9->Str1
+		If sub(Str1,A-2,1)="O
+		Str0+"  "+Str9->Str1
+		X-1->X
+		A-1->A
+		0->K
+		Output(1,1,Str1
+		Output(Y,X,"Omega
+	End
+End
+If K=26 and X<=15 and sub(Str1,A+1,1)="|N
+Then
+	If sub(Str1,A+2,1)=" " or sub(Str1,A+2,1)="O
+	Then
+		sub(Str1,1,A)->Str0
+		sub(Str1,A+3,(length(Str1)-(A+2)->Str9
+		If sub(Str1,A+2,1)=" 
+		Str0+" |N"+Str9->Str1
+		If sub(Str1,A+2,1)="O
+		Str0+"  "+Str9->Str1
+		X+1->X
+		A+1->A
+		0->K
+		Output(1,1,Str1
+		Output(Y,X,"Omega
+End:End
+If K=24 and sub(Str1,A-1,1)="Ã?
+Then
+	Output(Y,X,"
+	M->X:N->Y:O->A
+	Output(Y,X,"Omega
+End
+If K=25 and sub(Str1,A-16,1)="Ã?
+Then
+	Output(Y,X," 
+	M->X:N->Y:O->A
+	Output(Y,X,"Omega
+End
+If K=26 and sub(Str1,A+1,1)="Ã?
+Then
+	Output(Y,X," 
+	M->X:N->Y:O->A
+	Output(Y,X,"Omega
+End
+If K=34 and sub(Str1,A+16,1)="Ã?
+Then
+	Output(Y,X," 
+	M->X:N->Y:O->A
+	Output(Y,X,"Omega
+End
+If K=45:Goto M
+Goto PL
+Lbl L
+L+1->L
+If L=16:Goto E
+prgmDNGLEVLS
+Goto PL
+Lbl Q
+ClrDraw
+AxesOn
+ZStandard
+ClrHome
+L->|LDNGN(1
+DelVar Str1DelVar Str0DelVar Str8DelVar Str9
+Stop
+Lbl H
+Goto M
+Lbl E
+ClrDraw
+Text(~1,1,1,"Here is your
+Text(~1,10,1,"   CAKE!!!
+Text(42,5,"You have beat all 15 levels
+Text(57,15,"Press Any Key
+Line(~7,13,7,4
+Line(7,4,7,~9
+Line(7,~9,~14,~6
+Line(~14,~6,~14,7
+Line(~14,7,7,3
+Line(~15,~5,~15,7
+Line(~15,7,~8,13
+Repeat getKey
+	Line(6,~2,~13,1
+	Line(6,~3,~13,0
+	Line(6,~4,~13,~1
+	
+	Line(6,~2,~13,1,0
+	Line(6,~3,~13,0,0
+	Line(6,~4,~13,~1,0
+End
+ClrDraw
+Goto M
