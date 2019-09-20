@@ -1,0 +1,8 @@
+1->B
+Repeat theta or B=1+length(Str1
+	sub(Str1,B,1->Str0
+	prgmTYPE
+	B+1->B
+End
+theta->|LTYP(C
+B-1->B

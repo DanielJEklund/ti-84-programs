@@ -1,0 +1,18 @@
+0
+If Str0="+
+1
+If Str0="-
+2
+If Str0="*
+3
+If Str0="/" or Str0="n/d
+4
+If Str0="^
+5
+If Str0="=
+7
+If Str0=">
+8
+If Str0="<
+9
+Ans->theta

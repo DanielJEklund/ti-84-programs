@@ -1,0 +1,8 @@
+1->M
+Repeat sub(Str2,V,1)=sub(".123456789",M,1) or sub(Str2,V,1)="0
+	M+1->M
+End
+If sub(Str2,V,1)!="0
+(M-1)10^(W-1)->E
+If sub(Str2,V,1)="0
+0->E

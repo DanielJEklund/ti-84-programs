@@ -1,0 +1,6 @@
+0->Z
+For(A,2,length(Str1)-1
+	sub(Str1,A,1->Str0
+	prgmTYPE
+	If theta:Z+1->Z
+End

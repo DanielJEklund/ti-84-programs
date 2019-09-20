@@ -1,0 +1,61 @@
+"CSE Pretty Math->Str5
+"LINKSOFT 2013->Str7
+"--------------------------->Str6
+ClrHome
+Disp Str5,Str7,Str6
+Repeat Q=1
+	0->Q
+	Input "",Str1
+	Str1+":->Str1
+	If Str1="QUIT:
+	1->Q
+	If Str1="HELP:" and Q=0 or Q=2
+	Then
+		2->Q
+		Disp "AVAILABLE SYMBOLS:","+-*/^=><n/d","MADE BY:","LINKSOFT 2013
+		Disp Str6
+	End
+	If Str1!="HELP:" and Q!=2 and Q!=1:Then
+		prgmMANY
+		Z+1->dim(|LCAS
+		Z->dim(|LTYP
+		3->dim(|LEQU
+		1->|LEQU(1
+		1->C
+		Repeat C=Z+2
+			prgmFIND
+			F->|LCAS(C
+			C+1->C
+			If C!=Z+2
+			sub(Str1,2,length(Str1)-1->Str1
+		End
+		|LCAS(1->L
+		For(S,1,Z
+			|LTYP(S->H
+			|LCAS(S+1->N
+			".->Str0
+			If H=1:L+N->L
+			If H=2:L-N->L
+			If H=3:LN->L
+			If H=4:L/N->L
+			If H=5:L^N->L
+			
+			If H=7:L=N->L
+			If H=8:L>N->L
+			If H=9:L<N->L
+			
+		End
+		If H>6 and L
+		"                      True->Str0
+		If H>6 and not(L
+		"                     False->Str0
+		If Str0=".
+		Then
+			Disp L,Str6
+		Else
+			Disp Str0,Str6
+		End
+		
+	End
+End
+ClrHome
