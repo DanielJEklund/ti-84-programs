@@ -30,4 +30,4 @@ About:
 Feel free to pm me or email me at respective locations:
 pm: zeldaking@cemetech.net
 pm: zeldaking@omnimaga.net
-Email: dannycraze@gmail.com (No spamming!)
+Email: daniel.g.thacker@gmail.com (No spamming!)
