@@ -1,0 +1,40 @@
+Line(M,N,M+G,N,C
+Line(M,N,M,N-17R-16+2R,C
+Line(M+G,N,M+G,N-17R-16+2R,C
+Line(M,N-17R-16+2R,M+G,N-17R-16+2R,C
+164-N+2->S
+M+4->Q
+Text(S,Q,Str0
+Text(S+14,Q,Str1
+If R>1
+Text(S+28,Q,Str2
+If R>2
+Text(S+42,Q,Str3
+If R>3
+Text(S+56,Q,Str4
+If R>4
+Text(S+70,Q,Str5
+If R>5
+Text(S+84,Q,Str6
+If R>6
+Text(S+98,Q,Str7
+If R>7
+Text(S+112,Q,Str8
+If J:Goto 9
+Text(S+14,Q,">
+1->P:14->T
+Repeat K=21
+	getKey->K
+	If K=41:Stop
+	If K=25 and P!=1:Then
+		Text(S+T,Q,"     "
+		T-14->T:P-1->P
+		Text(S+T,Q,">
+	End
+	If K=34 and P!=R:Then
+		Text(S+T,Q,"     "
+		T+14->T:P+1->P
+		Text(S+T,Q,">
+	End
+End
+Lbl 9

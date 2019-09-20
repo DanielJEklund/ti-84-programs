@@ -1,0 +1,9 @@
+Gray
+If C=0:MedGray
+If C=1:Blue
+If C=2:Green
+If C=3:Red
+If C=4:Navy
+If C=5:Brown
+If C=10:DarkGray
+TextColor(Ans

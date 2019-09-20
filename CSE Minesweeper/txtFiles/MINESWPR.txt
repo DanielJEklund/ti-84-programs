@@ -1,0 +1,235 @@
+StoreGDB 0
+AxesOff
+0->Xmin:264->Xmax
+0->Ymin:164->Ymax
+Lbl M
+ClrDraw
+0->J
+TextColor(DarkGray
+Text(~1,1,1,"MINESWEEPER
+Text(~1,18,1,"LINKSOFT 2013
+24->dim(|LMS
+"SIZE:->Str0
+"     5->Str1
+"     6->Str2
+"     7->Str3
+"     8->Str4
+"     9->Str5
+"     10->Str6
+Black->C
+6->R:77->M:120->N
+40->G
+prgmMSEL
+P+4->Z
+If Z<=4:5->Z
+If Z>=10:10->Z
+"LEVEL:->Str0
+"     EASY->Str1
+"     MEDIUM->Str2
+"     HARD->Str3
+"     PRO->Str4
+"     CUSTOM->Str5
+120->M:120->N
+5->R:70->G
+prgmMSEL
+P->C
+If C=1:Z->theta
+If C=2:2Z->theta
+If C=3:3Z->theta
+If C=4:iPart(ZZ/2->theta
+If C>=5 or C<=0:Then
+	ClrHome
+	Disp ""
+	Output(1,1,"MINES:(1-  )
+	Output(1,10,ZZ-1
+	Input "",theta
+	If theta>=ZZ
+	ZZ-1->Z
+	If theta<=0
+	1->theta
+End
+ClrDraw
+ClrHome
+Disp "LOADING...
+DelVar L3
+100->dim(L3
+DelVar L1
+ZZ->dim(L1
+For(A,1,theta
+	Repeat L1(C)=0
+		randInt(1,ZZ->C
+	End
+	1->L1(C
+End
+For(T,1,Z
+	For(S,1,Z
+		0->A:0->B:0->C
+		0->D:0->E:0->F
+		0->I:0->J:0->K
+		If T!=1:Then
+			If S!=1:L1(ZT-2Z+S-1->A
+			L1(ZT-2Z+S->B
+			If S!=Z:L1(ZT-2Z+S+1->C
+		End
+		If S!=1:L1(ZT-Z+S-1->D
+		If S!=Z:L1(ZT-Z+S+1->F
+		If T!=Z:Then
+			If S!=1:L1(ZT+S-1->I
+			L1(ZT+S->J
+			If S!=Z:L1(ZT+S+1->K
+		End
+		A+B+C+D+F+I+J+K->E
+		If L1(ZT-Z+S)=1:9->E
+		E->L2(ZT-Z+S
+	End
+End
+DelVar L1
+ZZ->dim(L1
+L2->L3
+Black->C
+11->T
+(260-16T)/2-16->O
+For(T,1,Z+1
+	If T=1:16T+O->S
+	If T=Z+1:16T+O->U
+	Line(16T+O,163,16T+O,163-16Z,C
+End
+For(T,1,Z+1
+	Line(S,163-16T+16,U,163-16T+16,C
+End
+TextColor(Black
+For(Q,1,11
+	Text(14Q-14+1,31,sub("ZELDAKING  ",Q,1
+	Text(14Q-14+1,2,sub("MINESWEEPER",Q,1
+End
+theta->F:0->T
+Text(30,208,"MINES:
+Text(43,215,F
+Text(100,208,"TIME:
+Text(113,215,T
+Black->C
+Line(215,100,230,100,C
+Line(212,97,233,97,C
+Line(209,94,209,82,C
+Line(235,94,235,82,C
+Line(212,79,233,79,C
+Line(215,76,230,76,C
+Yellow->C
+Line(215,97,230,97,C
+Line(212,94,233,94,C
+Line(212,91,233,91,C
+Line(212,88,233,88,C
+Line(212,85,233,85,C
+Line(212,82,233,82,C
+Line(215,79,230,79,C
+Black->C
+Pt-On(218,94,1,C
+Pt-On(227,94,1,C
+Pt-On(215,85,1,C
+Pt-On(230,85,1,C
+Line(218,82,227,82,C
+1->A:1->B:0->L:0->W:~1->U
+"012345678MF->Str1
+Text(16B-14,16A+31,"X
+Repeat K=45 or W or L
+	getKey->K
+	Text(113,215,T
+	If U=6:Then
+		T+1->T
+		~1->U
+	End
+	U+1->U
+	If K=41:Stop
+	If K=31:Then
+		TextColor(Black
+		Text(43,215,"          "
+		If L2(ZB-Z+A)!=10:Then
+			10->D
+			1->C
+			F-1->F
+		End
+		If L2(ZB-Z+A)=10:Then
+			L3(ZB-Z+A)->D
+			0->C
+			F+1->F
+		End
+		C->L1(ZB-Z+A
+		D->L2(ZB-Z+A
+		Text(43,215,F
+		If F=0:Then
+			0->R
+			For(J,1,ZZ
+				If 9=L2(J:1->R
+			End
+			If not(R:1->W
+		End
+		
+	End
+	If K=21:Then
+		1->L1(ZB-Z+A
+		If L2(ZB-Z+A)=9
+		1->L
+	End
+	If K=24 or K=26 or K=25 or K=34:Then
+		TextColor(Black
+		Text(16B-14,16A+31,"     "
+	End
+	A+(K=26 and A!=Z)-(K=24 and A!=1)->A
+	B+(K=34 and B!=Z)-(K=25 and B!=1)->B
+	If K=24 or K=26 or K=34 or K=25:Then
+		TextColor(Black
+		Text(16B-14,16A+31,"X
+	End
+	If K=26:Then
+		If L1(ZB-Z+A-1:Then
+			L2(ZB-Z+A-1->C
+			prgmTXTCOL
+			Text(16B-14,16A+15,sub(Str1,C+1,1
+	End:End
+	If K=24:Then
+		If L1(ZB-Z+A+1:Then
+			L2(ZB-Z+A+1->C
+			prgmTXTCOL
+			Text(16B-14,16A+47,sub(Str1,C+1,1
+	End:End
+	If K=25:Then
+		If L1(ZB+A:Then
+			L2(ZB+A->C
+			prgmTXTCOL
+			Text(16B+2,16A+31,sub(Str1,C+1,1
+	End:End
+	If K=34:Then
+		If L1(ZB-2Z+A:Then
+			L2(ZB-2Z+A->C
+			prgmTXTCOL
+			Text(16B-30,16A+31,sub(Str1,C+1,1
+	End:End
+	
+End
+TextColor(Black
+For(U,1,Z
+	For(V,1,Z
+		L2(ZU-Z+V->C
+		If L or (W and C=9
+		Text(16U-14,16V+31,sub("012345678MF",C+1,1
+	End
+End
+TextColor(Blue
+"GAME OVER->Str0
+If W:"YOU WIN!       ->Str1
+If L:"YOU LOSE!    ->Str1
+1->J:90->M:160->N
+1->R:Blue->C
+85->G
+prgmMSEL
+100->G
+"PLAY AGAIN?->Str0
+128->N:0->J
+"     YES                       ->Str1
+"     NO                            ->Str2
+2->R
+prgmMSEL
+If P=1:Goto M
+ClrDraw
+RecallGDB 0
+ClrHome
