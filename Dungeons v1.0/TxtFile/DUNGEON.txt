@@ -1,0 +1,331 @@
+AxesOff
+ZStandard
+ZInteger
+ClrDraw
+ClrHome
+1->A
+Line(~29,~7,~29,~11
+Line(~28,~12,~27,~13
+Line(~26,~14,~16,~14
+Line(~15,~13,~14,~12
+Line(~28,~6,~27,~5
+Line(~26,~4,~16,~4
+Line(~15,~5,~14,~6
+Line(~25,~8,~25,~10
+Line(~17,~10,~17,~8
+Line(24,~7,~24,~7
+Line(24,~11,~24,~11
+Line(~4,~10,~4,~8
+Line(4,~8,4,~10
+Line(17,~10,17,~8
+Line(~7,~6,~6,~5
+Line(~7,~12,~6,~13
+Line(~5,~4,5,~4
+Line(~5,~14,5,~14
+Line(6,~13,7,~12
+Line(6,~5,7,~6
+Line(14,~6,15,~5
+Line(14,~12,15,~13
+Line(16,~14,26,~14
+Line(16,~4,26,~4
+Line(27,~5,28,~6
+Line(27,~13,28,~12
+Line(29,~11,29,~7
+Line(25,~8,25,~10
+Repeat A=20
+	A+1->A
+	Output(3,3,"  LinkSoft
+	Output(4,4,"Productions
+	Text(~1,17,12,"  LinkSoft
+	Text(~1,25,18,"Productions
+End
+ClrHome
+ClrDraw
+Repeat A=40
+	A+1->A
+	Output(4,1,"   Presents     "
+	Text(~1,25,18,"Presents      "
+End
+ClrDraw
+ClrHome
+Repeat A=60
+	A+1->A
+	Output(4,4,"Dungeons
+	Output(3,5,"v1.0
+	Text(~1,25,18,"Dungeons
+	Text(~1,17,24,"v1.0
+End
+" "->Str1
+" "->Str9
+" "->Str0
+" "->Str8
+1->dim(|LDNGN
+|LDNGN(1)->L
+Lbl M
+ClrHome
+Output(1,1,"-Ã?.:Dungeons:.Ã?-
+Output(3,3,"Play
+Output(4,3,"New
+Output(5,3,"Help
+Output(6,3,"Quit
+Output(3,2,"[|>]
+3->A
+0->K
+Repeat K=21
+	getKey->K
+	If K=25 and A!=3
+	Then
+		Output(A,2," "
+		A-1->A
+		Output(A,2,"[|>]
+	End
+	If K=34 and A!=6
+	Then
+		Output(A,2," "
+		A+1->A
+		Output(A,2,"[|>]
+	End
+End
+If A=5
+Goto H
+If A=4
+Goto N
+If A=3
+Goto P
+If A=6
+Goto Q
+Lbl N
+1->L
+1->|LDNGN(1)
+Lbl P
+ClrHome
+If L=0
+Then
+	Output(1,2,"No Saved File
+	Repeat getKey
+	End
+End
+If |LDNGN(1)=0
+Goto M
+Output(1,1,"-Ã?.:Dungeons:.Ã?-
+Output(2,1,"  Choose Cell 
+Output(7,1,"By: Link Swenson
+Output(8,1," AKA: ZeldaKing
+Output(5,1," 1 2 3 4 5
+1->A
+1->D
+Repeat K=21 and D<=|LDNGN(1)
+	getKey->K
+	If K=45
+	Goto M
+	If D<=|LDNGN(1)
+	Output(6,1," Unlocked | |"
+	If D>|LDNGN(1)
+	Output(6,1," Locked   |Omega|"
+	If K=24 or K=26
+	Output(5,A," "
+	If K=24 and A!=1
+	Then
+		If D<=11
+		A-2->A
+		If D>=11
+		A-3->A
+		D-1->D
+		0->K
+	End
+	If K=26 and A!=9 and A!=13
+	Then
+		If D<=10
+		A+2->A
+		If D>=11
+		A+3->A
+		D+1->D
+		0->K
+	End
+	If K=26 and D!=20
+	Then
+		If A=9 or A=13
+		Then
+			Output(5,1,"                "
+			1->A
+			D+1->D
+			2->E
+			For(C,0,4
+				Output(5,E,D+C
+				If D>=11
+				E+3->E
+				If D<=10
+				E+2->E
+			End
+		End
+	End
+	If K=24 and A=1 and D!=1
+	Then
+		Output(5,1,"                "
+		D-5->D
+		1->A
+		2->E
+		For(C,0,4
+			Output(5,E,D+C
+			If D<=10
+			E+2->E
+			If D>=11
+			E+3->E
+		End
+	End
+	Output(5,A,"[|>]
+End
+D->L
+prgmDNGLEVLS
+Repeat K=45
+	If K=22
+	prgmDNGLEVLS
+	If K=24 and sub(Str1,A-1,1)="[<|]
+	Goto L
+	If K=26 and sub(Str1,A+1,1)="[|>]
+	Goto L
+	If K=34 and sub(Str1,A+16,1)="downarrow
+	Goto L
+	If K=25 and Y>=2 and sub(Str1,A-16,1)="uparrow
+	Goto L
+	If K=24 and X!=1 and sub(Str1,A-1,1)=" "
+	Then
+		Output(Y,X," "
+		X-1->X
+		A-1->A
+		Output(Y,X,"x"
+		0->K
+	End
+	If K=26 and X!=16 and sub(Str1,A+1,1)=" "
+	Then
+		Output(Y,X," "
+		X+1->X
+		A+1->A
+		Output(Y,X,"x
+		0->K
+	End
+	If K=25 and Y>=2
+	Then
+		If sub(Str1,A-16,1)=" "
+		Then
+			Output(Y,X," "
+			Y-1->Y
+			A-16->A
+			Output(Y,X,"x
+			0->K
+		End
+	End
+	If K=34 and Y!=8 and sub(Str1,A+16,1)=" "
+	Then
+		Output(Y,X," "
+		Y+1->Y
+		A+16->A
+		Output(Y,X,"x
+		0->K
+	End
+	getKey->K
+	If K=25 and Y>=3 and sub(Str1,A-16,1)="|N
+	Then
+		If sub(Str1,A-32,1)=" " or sub(Str1,A-32,1)="O
+		Then
+			sub(Str1,1,A-33)->Str9
+			sub(Str1,A-31,15)->Str0
+			sub(Str1,A-15,length(Str1)-(A-16))->Str8
+			If sub(Str1,A-32,1)=" "
+			Str9+"|N"+Str0+" "+Str8->Str1
+			If sub(Str1,A-32,1)="O
+			Str9+" "+Str0+" "+Str8->Str1
+			A-16->A
+			Y-1->Y
+			0->K
+			Output(1,1,Str1
+			Output(Y,X,"x
+		End
+	End
+	If K=34 and Y<=7 and sub(Str1,A+16,1)="|N
+	Then
+		If sub(Str1,A+32,1)=" " or sub(Str1,A+32,1)="O
+		Then
+			sub(Str1,1,A+15)->Str9
+			sub(Str1,A+17,15)->Str0
+			sub(Str1,A+33,length(Str1)-(A+32)->Str8
+			If sub(Str1,A+32,1)=" "
+			Str9+" "+Str0+"|N"+Str8->Str1
+			If sub(Str1,A+32,1)="O
+			Str9+" "+Str0+" "+Str8->Str1
+			A+16->A
+			Y+1->Y
+			0->K
+			Output(1,1,Str1
+			Output(Y,X,"x
+		End
+	End
+	If K=24 and X>=2 and sub(Str1,A-1,1)="|N"
+	Then
+		If sub(Str1,A-2,1)=" " or sub(Str1,A-2,1)="O"
+		Then
+			sub(Str1,1,A-3)->Str0
+			sub(Str1,A,length(Str1)-(A-1))->Str9
+			If sub(Str1,A-2,1)=" "
+			Str0+"|N "+Str9->Str1
+			If sub(Str1,A-2,1)="O"
+			Str0+"  "+Str9->Str1
+			X-1->X
+			A-1->A
+			0->K
+			Output(1,1,Str1
+			Output(Y,X,"x
+		End
+	End
+	If K=26 and X<=15 and sub(Str1,A+1,1)="|N"
+	Then
+		If sub(Str1,A+2,1)=" " or sub(Str1,A+2,1)="O
+		Then
+			sub(Str1,1,A)->Str0
+			sub(Str1,A+3,(length(Str1)-(A+2)->Str9
+			If sub(Str1,A+2,1)=" "
+			Str0+" |N"+Str9->Str1
+			If sub(Str1,A+2,1)="O
+			Str0+"  "+Str9->Str1
+			X+1->X
+			A+1->A
+			0->K
+			Output(1,1,Str1
+			Output(Y,X,"x
+		End
+	End
+	Goto A
+	Lbl L
+	L+1->L
+	prgmDNGLEVLS
+	Lbl A
+End
+Goto M
+Lbl Q
+ClrDraw
+AxesOn
+ZStandard
+ClrHome
+L->|LDNGN(1)
+DelVar Str1DelVar Str0DelVar Str8DelVar Str9
+Stop
+Lbl H
+ClrHome
+Disp "YOU HAVE BEEN","CAPTURED BY A","MAD SCIENTIST","WHO HAS LOCKED","YOU UP IN HIS","DEEPEST PRISONS","BUT THERE IS
+Output(8,1,"STILL HOPE
+Repeat getKey
+End
+Disp "THE PRISONS ARE","MANY CELLS WHICH","ARE CONNECTED","BUT EACH CELL","HOLDS PUZZLING","PUZZLES THAT IN","ORDER TO ESCAPE","YOU MUST SOLVE
+Output(8,1,"THEM TO GET PASS
+Repeat getKey
+End
+Disp "TO COMPLETE EACH","CELL YOU NEED","TO GET TO:","[<|] OR downarrow OR uparrow OR [|>]","","",""
+Repeat getKey
+End
+Disp "MOVEABLE WALL: |N","SOLID WALL: invertedequal","HOLE: O","TO FILL A HOLE","PUSH A |N INTO IT"
+Repeat getKey
+End
+Disp "CONTROLS","ARROW PAD:","MOVE ACCORDINGLY","[2ND]: ENTER","[MODE]: RESET","[CLEAR]:"," QUIT TO MENU
+Repeat getKey
+End
+Goto M

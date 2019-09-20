@@ -1,0 +1,87 @@
+If K!=22
+Then
+	ClrHome
+	ClrDraw
+	0->A
+	Repeat A=15
+		A+1->A
+		Output(4,4,"Cell
+		Output(4,10,L
+		Text(~1,24,17,"Cell
+		Text(~1,24,53,L
+	End
+	ClrHome
+End
+If L=10
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal   |N O       Oinvertedequalinvertedequal|N |N   |NO|N  O|NOinvertedequalinvertedequalOinvertedequal|NinvertedequalinvertedequalinvertedequalOinvertedequal |N  |NOinvertedequalinvertedequalOinvertedequalO   |N |N invertedequalO |NinvertedequalinvertedequalOinvertedequalO|NO|NO|NO|Ninvertedequal|N|N invertedequalinvertedequalOinvertedequalO   |N |NO    invertedequalinvertedequaldownarrowinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	2->X
+	2->Y
+	18->A
+End
+If L=9
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal   |N |N|N|NO|N|N |N invertedequalinvertedequal   |N |NO|N|NO|N |N invertedequalinvertedequal   |N |N|N|NO|N|N |N invertedequalinvertedequal|N  |N |NO|N|NO|N |N invertedequalinvertedequal |N |N |N|N|NO|N|N |N invertedequalinvertedequalO |N|N |NO|N|NO|N |N invertedequalinvertedequaldownarrowinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	15->X
+	3->Y
+	47->A
+End
+If L=1
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal      |N        [|>]invertedequal     |N        invertedequalinvertedequal     |N        invertedequalinvertedequal     |N        invertedequalinvertedequal     |N        invertedequalinvertedequal     |N        invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	1->X
+	2->Y
+	17->A
+End
+If L=2
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal      |N        invertedequalinvertedequal    |N |N       invertedequalinvertedequal   |N   |N     |Ninvertedequalinvertedequal  |N     |N   |N invertedequalinvertedequal |N       |N |N  invertedequalinvertedequal|N         |N   [|>]invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	1->X
+	2->Y
+	17->A
+End
+If L=3
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal  [|>]invertedequalinvertedequalinvertedequalinvertedequalinvertedequal|N    |N invertedequal invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequal invertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequal invertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequal|N  |N invertedequal     |N invertedequalinvertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	1->X
+	7->Y
+	97->A
+End
+If L=4
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal |N invertedequal   invertedequal    |N  invertedequalinvertedequal invertedequal  invertedequal invertedequal invertedequal |N |N invertedequalinvertedequal invertedequal invertedequal  invertedequal invertedequal  |N  invertedequalinvertedequal invertedequal invertedequal invertedequal |N invertedequal|N |N invertedequalinvertedequal invertedequal invertedequal  invertedequal  invertedequal |N  invertedequalinvertedequal  |N invertedequal   invertedequal |N |N [|>]invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	1->X
+	2->Y
+	17->A
+End
+If L=5
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal   |N    invertedequalOinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal invertedequalinvertedequal invertedequalinvertedequal invertedequalinvertedequal|N |NOinvertedequalinvertedequal  invertedequal |N    invertedequalOinvertedequalinvertedequal invertedequalinvertedequal   invertedequal|Ninvertedequalinvertedequalinvertedequalinvertedequalinvertedequal|Ninvertedequalinvertedequal invertedequalinvertedequalinvertedequal|N invertedequal   |N O invertedequalinvertedequal invertedequal   invertedequalinvertedequal invertedequal   invertedequal invertedequalinvertedequal invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequaldownarrowinvertedequal->Str1
+	1->X
+	7->Y
+	97->A
+End
+If L=6
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal OO      |NOinvertedequal  invertedequalinvertedequal invertedequal invertedequal invertedequalinvertedequalinvertedequalinvertedequalinvertedequal|Ninvertedequal  invertedequalinvertedequal invertedequal|N  invertedequal  invertedequal |NO|N invertedequalinvertedequal|NO  invertedequalinvertedequal|N invertedequal invertedequalO  invertedequalinvertedequalO invertedequalinvertedequal    invertedequalOO |N invertedequal[<|]O     |NOinvertedequal     invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	15->X
+	2->Y
+	31->A
+End
+If L=7
+Then
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal |N |N |N |N |N |N |Ninvertedequal[<|]|N |N |N |N |N |N |N invertedequal  |N |N |N |N |N |N |Ninvertedequalinvertedequal|N |N |N |N |N |N |N invertedequalinvertedequal |N |N |N |N |N |N |Ninvertedequalinvertedequal|N |N |N |N |N |N |N invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+	7->Y
+	111->A
+	15->X
+End
+If L=8
+Then
+	31->A
+	15->X
+	2->Y
+	"invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal    invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal  invertedequal[<|] invertedequalinvertedequal invertedequal OO |NO|N |Ninvertedequalinvertedequalinvertedequalinvertedequal  invertedequal invertedequal   invertedequalinvertedequalOOinvertedequalinvertedequalinvertedequal  invertedequal  invertedequalinvertedequalinvertedequalOOO|N invertedequalinvertedequalinvertedequal invertedequalinvertedequal invertedequal |NO|N  |N invertedequalinvertedequal     invertedequal   invertedequal |NO invertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequalinvertedequal->Str1
+End
+Str1+"                "->Str1
+Output(1,1,Str1
+Output(Y,X,"x
