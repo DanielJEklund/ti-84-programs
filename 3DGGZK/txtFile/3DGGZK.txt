@@ -1,0 +1,241 @@
+ClrDraw
+AxesOff
+PlotsOff 
+1->Xmin
+95->Xmax
+1->Ymin
+63->Ymax
+4->dim(|LTD
+ClrHome
+Disp "-3D GRAVITY GUY-","","    START","    QUIT","","","   ZELDAKING   
+Output(8,1," DANNY THACKER 
+3->A
+Output(A,4,">
+Repeat K=105
+	getKey->K
+	If K:Output(A,4," 
+	If K=21:Then
+		If A=3:4->V
+		If A=4:3->V
+		V->A
+	End
+	If K
+	Output(A,4,">
+End
+ClrHome
+If A=4:Goto Q
+Disp "  -GAME MODE-","","","","",""
+Output(3,3,"1:CUSTOM
+Output(4,3,"2:INFINITE
+Input "CHOOSE:",A
+ClrHome
+If A=1:Then
+	Disp "    -CUSTOM-","",""
+	Input "HOW MANY LVLS:",W
+End
+If A=2
+100000->W
+
+ClrDraw
+Line(33,1,63,1
+Line(33,1,37,11
+Line(37,11,59,11
+Line(59,11,63,1
+Horizontal 32
+StorePic 1
+ClrDraw
+Line(37,53,59,53
+Line(37,53,33,63
+Line(33,63,63,63
+Line(63,63,59,53
+Horizontal 32
+StorePic 2
+ClrDraw
+Line(37,11,59,11
+Line(37,11,40,20
+Line(40,20,56,20
+Line(56,20,59,11
+StorePic 3
+ClrDraw
+Line(40,44,56,44
+Line(40,44,37,53
+Line(37,53,59,53
+Line(59,53,56,44
+StorePic 4
+ClrDraw
+Line(40,20,56,20
+Line(40,20,42,25
+Line(42,25,54,25
+Line(54,25,56,20
+StorePic 5
+ClrDraw
+Line(42,39,54,39
+Line(42,39,40,44
+Line(40,44,56,44
+Line(56,44,54,39
+StorePic 6
+ClrDraw
+Line(42,25,54,25
+Line(42,25,44,29
+Line(44,29,52,29
+Line(52,29,54,25
+StorePic 7
+ClrDraw
+Line(44,35,52,35
+Line(44,35,42,39
+Line(42,39,54,39
+Line(54,39,52,35
+StorePic 8
+ClrDraw
+Line(44,29,52,29
+Line(44,29,45,31
+Line(52,29,51,31
+StorePic 9
+ClrDraw
+
+1->L
+0->theta
+Lbl NL
+W-1->W
+If L=1:8->S
+If L=2:6->S
+If L=3:4->S
+If L=4:2->S
+If L>=5:0->S
+"LVL LOAD
+ClrDraw
+90->dim(L1
+ClrHome
+Disp "LOADING LVL
+Output(1,13,L
+For(A,4,82
+	randInt(0,1->L1(A
+End
+For(A,1,4
+	1->L1(A
+End
+0->T
+1->A
+0->D:0->E:0->F:0->G:0->H
+55->P
+55->V
+0->Q
+Repeat A=85 or Q=1
+	getKey->K
+	If not(T
+	Then
+		L1(A->D
+		L1(A+1->E
+		L1(A+2->F
+		L1(A+3->G
+		L1(A+4->H
+		
+		ClrDraw
+		Text(P,46,"X
+		If D
+		RecallPic 1
+		If not(D
+		RecallPic 2
+		If E
+		RecallPic 3
+		If E and not(D
+		Then
+			Line(37,10,39,8
+			Line(39,8,57,8
+			Line(57,8,59,10
+		End
+		If not(E
+		RecallPic 4
+		If D and not(E
+		Then
+			Line(37,54,39,56
+			Line(39,56,57,56
+			Line(57,56,59,54
+		End
+		If F
+		RecallPic 5
+		If F and not(E
+		Then
+			Pt-On(40,19
+			Pt-On(56,19
+			Line(41,18,55,18
+		End
+		If not(F
+		RecallPic 6
+		If E and not(F
+		Then
+			Pt-On(40,45
+			Pt-On(56,45
+			Line(41,46,55,46
+		End
+		If G
+		RecallPic 7
+		If G and not(F
+		Line(43,24,53,24
+		If not(G
+		RecallPic 8
+		If F and not(G
+		Line(43,40,53,40
+		If H
+		RecallPic 9
+		If not(H:Then
+			Line(45,33,44,35
+			Line(44,35,52,35
+			Line(52,35,50,33
+		End
+		
+	End
+	T+1->T
+	If T=S:Then
+		0->T
+		A+1->A
+		theta+L->theta
+	End
+	If K=21:Then
+		If P=3:55->V
+		If P=55:3->V
+	End
+	If not(T
+	Then
+		If D=1 and P=3
+		1->Q
+		If D=0 and P=55:1->Q
+		V->P
+	End
+	
+End
+ClrHome
+63->B
+For(A,1,32
+	Horizontal A
+	Horizontal B
+	B-1->B
+End
+If Q=1:Then
+	Disp "YOU LOSE!","YOU SCORED:
+	Output(2,12,theta
+	If theta<|LTD(1
+	Then
+		Output(3,1,|LTD(1)-theta
+		Output(3,5,"POINTS LEFT
+		Output(4,1,"TO THE HIGHSCORE
+	Else
+		Disp "GOOD JOB
+		If theta=|LTD(1
+		Disp "YOU ARE TIED","FOR FIRST
+		If theta>|LTD(1
+		Disp "YOU HAVE THE","HIGHSCORE!
+		theta->|LTD(1
+	End
+End
+If A=85:Then
+	L+1->L
+	Disp "YOU WIN!
+End
+If A=85 and W!=0
+Goto NL
+Repeat getKey
+End
+Lbl Q
+ClrHome
+DelVar Pic1DelVar Pic2DelVar Pic3DelVar Pic4DelVar Pic5DelVar Pic6DelVar Pic7DelVar Pic8DelVar Pic9DelVar Pic0DelVar L1
