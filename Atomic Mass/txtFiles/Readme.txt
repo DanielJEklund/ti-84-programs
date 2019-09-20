@@ -1,1 +1,1 @@
-These are all the text source for the ATOMIC programs.
+These are all the text sources for the ATOMIC programs.
