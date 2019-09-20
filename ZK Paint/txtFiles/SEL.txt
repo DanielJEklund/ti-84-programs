@@ -1,0 +1,36 @@
+C->W
+If Z=0:Then
+	White->C
+	"                        ->Str0
+	Str0->Str1
+	Str0->Str2
+	Str0->Str3
+	Str0->Str4
+	Str0->Str5
+	Str0->Str6
+	Str0->Str7
+	Str0->Str8
+End
+Line(M,N,M+60,N,C
+Line(M,N,M,N-17theta-17+2theta,C
+Line(M+60,N,M+60,N-17theta-17+2theta,C
+Line(M,N-17theta-17+2theta,M+60,N-17theta-17+2theta,C
+164-N+2->S
+M+4->Q
+Text(S,Q,Str0
+Text(S+15,Q,Str1
+If theta>1
+Text(S+30,Q,Str2
+If theta>2
+Text(S+45,Q,Str3
+If theta>3
+Text(S+60,Q,Str4
+If theta>4
+Text(S+75,Q,Str5
+If theta>5
+Text(S+90,Q,Str6
+If theta>6
+Text(S+105,Q,Str7
+If theta>7
+Text(S+120,Q,Str8
+1->Z:W->C

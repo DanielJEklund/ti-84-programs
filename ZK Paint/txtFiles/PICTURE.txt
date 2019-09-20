@@ -1,0 +1,141 @@
+StoreGDB 0
+AxesOff
+0->Xmin:264->Xmax
+0->Ymin:164->Ymax
+BorderColor 1
+0->I
+Lbl M
+0->Q
+ClrDraw
+CUR
+3->A:161->B
+TYP
+1->T
+COL
+12->C
+0->D
+If I:Then
+	If I=1:RecallPic 1
+	If I=2:RecallPic 2
+	If I=3:RecallPic 3
+	If I=4:RecallPic 4
+	If I=5:RecallPic 5
+	If I=6:RecallPic 6
+	If I=7:RecallPic 7
+	If I=8:RecallPic 8
+	If I=9:RecallPic 9
+	0->I
+End
+Line(0,18,263,18,C
+Line(1,1,263,1,C
+Line(263,1,263,163,C
+Line(263,164,1,164,C
+Line(0,163,0,1,C
+TextColor(Black
+Text(147,7,"MENU      ----       COLOR                                          QUIT
+Line(46,18,46,0,C
+Line(95,18,95,0,C
+Line(149,18,149,0,C
+Line(220,18,220,0,C
+Pt-On(A,B,1,C
+1->Z
+Repeat K=15 or Q=15
+	getKey->K
+	If K=21:Pt-Change(A,B,C
+	If K=24 and A>=4:Then
+		Pt-Change(A,B,C
+		A-3->A:1->E
+		Pt-Change(A,B,C
+	End
+	If K=26 and A<=260:Then
+		Pt-Change(A,B,C
+		A+3->A:1->E
+		Pt-Change(A,B,C
+	End
+	If K=25 and B<=158:Then
+		Pt-Change(A,B,C
+		B+3->B:1->E
+		Pt-Change(A,B,C
+	End
+	If K=34 and B>=23:Then
+		Pt-Change(A,B,C
+		B-3->B:1->E
+		Pt-Change(A,B,C
+	End
+	If K=13:Then
+		StorePic 0
+		prgmCOLP
+		Pt-On(A,B,1,C
+	End
+	If K=11:Then
+		StorePic 0
+		"MENU->Str0
+		"1:SAVE->Str1
+		"2:OPEN->Str2
+		"3:NEW->Str3
+		"4:CLOSE->Str4
+		3->M:98->N
+		4->theta
+		prgmSEL
+		0->V
+		Repeat K=82
+			getKey->K
+			If K=94:Then
+				"START->Str0
+				"NEW?         ->Str1
+				"1:YES        ->Str2
+				"2:NO         ->Str3
+				3->theta
+				3->M:96->N
+				prgmSEL
+				Repeat K=92 or K=93
+				getKey->K:End
+				If K=93:Then
+					ClrDraw:RecallPic 0
+					82->K
+				End
+				If K=92:Then
+				15->Q:82->K:End
+			End
+			If K=93:Then
+				82->K:15->Q
+				ClrHome
+				Input "OPEN WHICH PIC? (1-9)     ",I
+			End
+			If K=92:Then
+				ClrHome
+				Input "STORE IN WHICH PIC? (1-9)  ",I
+				ClrDraw
+				RecallPic 0
+				Pt-Off(A,B
+				If I=1:StorePic 1
+				If I=2:StorePic 2
+				If I=3:StorePic 3
+				If I=4:StorePic 4
+				If I=5:StorePic 5
+				If I=6:StorePic 6
+				If I=7:StorePic 7
+				If I=8:StorePic 8
+				If I=9:StorePic 9
+				"PIC->Str0
+				"SAVED!->Str1
+				"1:OKAY->Str2
+				2->theta:75->M:100->N
+				prgmSEL
+				Repeat K=92
+					getKey->K
+				End
+				82->V
+				ClrDraw
+				RecallPic 0
+			End
+			If V:V->K
+		End
+		ClrDraw
+		RecallPic 0
+	End
+	
+End
+If Q=15:Goto M
+ClrDraw
+RecallGDB 0

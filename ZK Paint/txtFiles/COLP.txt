@@ -1,0 +1,75 @@
+92->M:128->N
+8->theta
+0->P
+Lbl A
+P+1->P
+"COLOR->Str0
+6->theta
+If P=1:Then
+	"1:BLUE->Str1
+	"2:RED->Str2
+	"3:BLCK->Str3
+	"4:PINK->Str4
+	"5:GRN->Str5
+	"6:MORE->Str6
+End
+If P=2:Then
+	"1:ORNG->Str1
+	"2:BRW->Str2
+	"3:NAVY->Str3
+	"4:LTBL->Str4
+	"5:YLLW->Str5
+	"6:MORE->Str6
+End
+If P=3:Then
+	"1:LTGRY->Str1
+	"2:MDGRY->Str2
+	"3:GRAY  ->Str3
+	"4:DKGRY->Str4
+	"-------->Str5
+	"6:CLOSE->Str6
+End
+prgmSEL
+
+Repeat K=84
+	getKey->K
+	If K=82 or (K=83 and P!=3) or K=92 or K=93 or K=94
+	Then
+		If P=1:Then
+			If K=92:Blue
+			If K=93:Red
+			If K=94:Black
+			If K=82:Magenta
+			If K=83:Green
+		End
+		If P=2:Then
+			If K=92:Orange
+			If K=93:Brown
+			If K=94:Navy
+			If K=82:LtBlue
+			If K=83:Yellow
+		End
+		If P=3:Then
+			If K=92:LtGray
+			If K=93:MedGray
+			If K=94:Gray
+			If K=82:DarkGray
+		End
+		Ans->C
+		M+62->M
+		"COLOR->Str0
+		"SET!->Str1
+		"1:OKAY->Str2
+		2->theta
+		prgmSEL
+		Repeat K=92
+		getKey->K:End
+		0->Z
+		prgmSEL
+		M-62->M
+	End
+	
+End
+If P!=3:Goto A
+ClrDraw
+RecallPic 0
