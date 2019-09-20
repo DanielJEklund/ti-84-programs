@@ -1,0 +1,18 @@
+AxesOff
+ClrHome:ClrDraw
+" "->Str4
+" "->Str2
+" "->Str3
+2->D:1->T:0->theta
+Input "Enter Molecule  ",Str1
+prgmINTERPRT
+If D=1:Then
+	Disp "","",""
+	Output(1,1,Str4
+	Output(2,1,Y
+	Output(2,12,"grams
+End
+If D=2:Then
+	Text(~1,12,1,Y
+	Text(~1,12,65,"grams
+End

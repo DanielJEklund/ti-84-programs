@@ -1,0 +1,101 @@
+AxesOff:FnOff 
+ClrDraw:0->R
+1->T:0->L:0->theta:1->Q
+24->H:5->G
+" "->Str1
+"()7894561230->Str5
+"ABCDEFGHIJKLMNOPQRSTUVWXYZ->Str6
+"abcdefghijklmnopqrstuvwxyz->Str7
+0->M
+Text(~1,26,5,"Enter Molecule
+Text(56,2,"A
+prgmMODE
+prgmCURSOR
+Repeat K=45 or K=21 or K=105
+	getKey->K
+	If K=23 and length(Str1)>1:Then
+		0->Q:prgmCURSOR
+		sub(Str1,length(Str1),1)->Str3
+		prgmNUMSTR
+		If not(C:Then
+			T-6->T:1->U
+			24->H:5->G
+		End
+		If C:Then
+			T-4->T:4->U
+			21->H:3->G
+		End
+		Text(~1,U,T," "
+		sub(Str1,1,length(Str1)-1)->Str1
+		1->Q:prgmCURSOR
+	End
+	If K=31:Then
+		5->N
+		0->Q:prgmCURSOR
+		M+1->M
+		If M=3:0->M
+		Text(56,2," "
+		Text(56,2,sub("Aa1",M+1,1
+		prgmMODE
+		1->Q
+		If M=0 or M=1:Then
+		24->H:5->G:End
+		If M=2:Then
+		3->G:21->H:End
+		prgmCURSOR
+	End
+	If M=0 and K:Then
+		prgmALPHAU
+		If A:Then
+			0->K
+			0->Q:24->H:5->G
+			prgmCURSOR
+			Text(~1,1,T,sub(Str6,A,1
+			T+6->T
+			1->M
+			4->G
+			Text(56,2,"a
+			prgmMODE
+			1->Q:prgmCURSOR
+		Str1+sub(Str6,A,1)->Str1:End
+	End
+	If M=1 and K:Then
+		prgmALPHAU
+		If A:Then
+			0->K
+			0->Q:24->H:4->G
+			prgmCURSOR
+			Text(~1,1,T,sub(Str7,A,1
+			T+6->T
+			2->M
+			Text(56,2,"1
+			prgmMODE
+			21->H:3->G
+			1->Q:prgmCURSOR
+		Str1+sub(Str7,A,1)->Str1:End
+	End
+	If M=2 and K:Then
+		prgmNUM
+		If A:Then
+			0->K
+			0->Q:21->H:3->G
+			prgmCURSOR
+			Text(4,T,sub(Str5,A,1
+			T+4->T
+			0->M:24->H:5->G
+			Text(56,2,"A
+			prgmMODE
+			1->Q:prgmCURSOR
+		Str1+sub(Str5,A,1)->Str1:End
+	End
+	
+End
+ClrDraw
+If K=45:Return
+sub(Str1,2,length(Str1)-1)->Str1
+1->T
+Text(~1,26,5,"Loading...
+prgmINTERPRT
+Text(~1,26,5,"          
+Text(~1,12,1,Y
+Text(~1,12,65,"grams

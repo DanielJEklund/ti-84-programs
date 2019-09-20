@@ -1,0 +1,6 @@
+For(P,56,62
+	For(O,1,5
+		Pxl-Change(P,O
+	End
+End
+Line(~46,~25,~46,~31
