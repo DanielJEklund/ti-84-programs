@@ -20,7 +20,7 @@ Gameplay:
 
 
 SUGGESTIONS NEEDED!!
-email me suggestions at: dannycraze@gmail.com
+email me suggestions at: daniel.g.thacker@gmail.com
 or send me a pm at cemetech.net or omnimaga.org @zeldaking
 
 
