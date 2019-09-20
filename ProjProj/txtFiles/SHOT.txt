@@ -1,0 +1,674 @@
+"LVLTXT
+"PROF. ZELDA->Str0
+If L>11:Then
+	"FREEPLAY MODE->Str0
+	"ALL LEVELS ARE RANDOM->Str1
+	1->T
+End
+If L=11:Then
+	"YOU BEAT THE BETA->Str0
+	"THIS IS THE CONTEST->Str1
+	"BETA.->Str2
+	"I WILL MAKE MORE LEVELS->Str3
+	"FOR THE PUBLIC RELEASE->Str4
+	4->T
+End
+If L=10:Then
+	"LET US TRY ONE->Str1
+	"MORE OF THESE FOR->Str2
+	"GOOD LUCK->Str3
+	"YEAH VELOCITY CRASHED->Str4
+	"AGAIN...->Str5
+	5->T
+End
+If L=9:Then
+	"WE ARE TRYING TO GET->Str1
+	"THIS SEARED INTO YOUR->Str2
+	"BRAIN. VELOCITY NEEDS->Str3
+	"A FIXIN' AGAIN->Str4
+	4->T
+End
+If L=8:Then
+	"COMMUNICATIONS BATCHED->Str1
+	"THIS COMM AGAIN->Str2
+	"VELOCITY IS GOING->Str3
+	"TO NEED TO CHANGE->Str4
+	4->T
+End
+If L=7:Then
+	"YOU ARE COMING ALONG->Str1
+	"PERFECTLY!->Str2
+	"WE WILL WIN THIS WAR->Str3
+	"THIS NEXT MISSION->Str4
+	"THE VELOCITY NEEDS->Str5
+	"TO BE DECIDED.->Str6
+	6->T
+End
+If L=6:Then
+	"NOW THAT YOU HAVE->Str1
+	"HAD SOME FUN PLAYING->Str2
+	"AROUND, IT IS TIME->Str3
+	"TO EXPLAIN A FEW THINGS->Str4
+	"I WANT TO TELL YOU->Str5
+	"ABOUT PROJECTILE MOTION->Str6
+	6->T
+	prgmTEXTROUT
+	"PROJECTILE MOTION->Str0
+	"PROJECTILE MOTION AHEM,->Str1
+	"IS A HUGE PART OF->Str2
+	"PHYSICS. DEALING WITH->Str3
+	"GRAVITY, ACCELERATION->Str4
+	"AND INERTIA. WHAT?->Str5
+	"SLOW DOWN? DONT WORRY->Str6
+	"I WILL EXPLAIN.->Str7
+	7->T
+	prgmTEXTROUT
+	"PROJECTILES->Str0
+	"FIRST OFF, WHAT IS A->Str1
+	"PROJECTILE?->Str2
+	"IT IS ANY OBJECT->Str3
+	"OR PARTICLE THAT->Str4
+	"GRAVITY ACTS UPON.->Str5
+	"WHEN YOU SHOOT THE->Str6
+	"MISSILE DO YOU NOTICE->Str7
+	"THE CURVE? THAT IS->Str8
+	8->T
+	prgmTEXTROUT
+	"BECAUSE IT IS LAUNCHED->Str1
+	"IN THE AIR BUT GRAVITY->Str2
+	"PULLS IT BACK DOWN.->Str3
+	"ENOUGH TALKING...->Str4
+	"LETS SEE A GOOD ARCH!->Str5
+	5->T
+End
+If L=5:Then
+	"NOW TRY THIS ONE!->Str1
+	"THE ANGLE IS FINE->Str2
+	"BUT VELOCITY GOT->Str3
+	"MESSED UP BY->Str4
+	"SOME IDIOTS IN->Str5
+	"COMMUNICATIONS->Str6
+	"YOU NEED TO SOLVE FOR->Str7
+	"VELOCITY (V)->Str8
+	8->T
+	prgmTEXTROUT
+	"SOLVE FOR V->Str0
+	"DG=V^^2sin(2theta)->Str1
+	"*TIMES BOTH SIDES BY G*->Str2
+	"DG/sin(2theta)=V^^2->Str3
+	"*DIVIDE BY sin(2theta)*->Str4
+	"V=sqrt(DG/sin(2theta))->Str5
+	"*TAKE SQUARE-ROOT*->Str6
+	"THERE YOU HAVE V!->Str7
+	7->T
+End
+If L=4:Then
+	"NICE WORK SO FAR!->Str1
+	"PRETTY SOON AND YOU->Str2
+	"WILL BE BLOWING->Str3
+	"UP ALL SORTS OF->Str4
+	"THINGS!->Str5
+	"THIS NEXT MISSION->Str6
+	"THE ANGLE NEEDS->Str7
+	"LINEING UP.->Str8
+	8->T
+	prgmTEXTROUT
+	"TO DO THIS, YOU NEED->Str1
+	"TO SOLVE THE EQUATION->Str2
+	"FOR ANGLE(theta).->Str3
+	"LIKE SO:->Str4
+	4->T
+	prgmTEXTROUT
+	"SOLVING FOR theta->Str0
+	"DG=V^^2sin(2theta)->Str1
+	"*TIMES SIDES BY G*->Str2
+	"DG/V^^2=sin(2theta)->Str3
+	"*DIVIDE BY V^^2*->Str4
+	"sin^-1(DG/V^^2)=2theta->Str5
+	"*TAKE sin^^-1 OF BOTH SIDES*->Str6
+	"theta=sin^-1(DG/V^^2)/2->Str7
+	"*FINALLY DIVIDE BY 2*->Str8
+	"AND YOU HAVE theta!->Str9
+	9->T
+End
+If L=3:Then
+	"IF YOU REMEMBER->Str1
+	"ANYTHING, THEN THIS->Str2
+	"WILL BE A BREEZE->Str3
+	"AGAIN, JUST PUSH [2ND]->Str4
+	"AND ENJOY THE SHOW.->Str5
+	5->T
+End
+If L=2:Then
+	"WELL HOPEFULLY YOU->Str1
+	"GOT THE HANG OF IT->Str2
+	"OUR NEXT TEST IS TO->Str3
+	"HIT A TARGET, SCARED?->Str4
+	"DONT WORRY IT IS EASY->Str5
+	"JUST PUSH [2ND] AGAIN->Str6
+	"I LINED IT UP FOR YOU->Str7
+	7->T
+End
+If L=1:Then
+	"GOODMORNING!->Str1
+	"I AM PROF. ZELDA, YES->Str2
+	"YES ITS A GIRLS NAME.->Str3
+	"I AM HERE TO GUIDE YOU IN->Str4
+	"THE NEXT COUPLE OF DAYS->Str5
+	"HAVE YOU BEEN DEBRIEFED?..->Str6
+	"NO?ILL GO GET THAT->Str7
+	"RIGHT AWAY!->Str8
+	8->T
+	prgmTEXTROUT
+	"DEBRIEF->Str0
+	"WELCOME TO THE WONDERFUL->Str1
+	"WORLD OF POKE...OOPS WRONG->Str2
+	"ONE.WE ARE AT WAR WITH SSR->Str3
+	"AND HAVE BEEN CONTACTED BY->Str4
+	"MR.PRESIDENT TO UNDERGO->Str5
+	"A SECRET MISSION. SADLY->Str6
+	"OUR SCIENTISTS DIED LAST->Str7
+	"MISSION.DONT WORRY YOU ARE->Str8
+	"79sqrt(pi/2) PERCENT SAFE.->Str9
+	9->T
+	prgmTEXTROUT
+	"WELL,WE NEED YOUR BRAIN,->Str1
+	"EVEN IF WE HAVE TO TRAIN IT.->Str2
+	"OH..AND YOU HAVE NO CHOICE->Str3
+	"WE JUST LANDED IN AREA 51->Str4
+	"OUR FIRST TEST WILL BEGIN->Str5
+	"TOMORROW,GOODNIGHT.->Str6
+	6->T
+	prgmTEXTROUT
+	"DAY 1:NEWTON SAID WHAT?->Str0
+	"HOW'D YOU SLEEP?->Str1
+	"WELL THE BEDS ARE MADE OF->Str2
+	"RECYCLED UFO PIECES,->Str3
+	"SO THAT DOES MAKE SENSE.->Str4
+	"WELL TODAY YOU START->Str5
+	"YOUR TRAINING, HOPEFULLY->Str6
+	"YOU BROUGHT A SPARE CALC?->Str7
+	"IF NOT GO GRAB A ONE...->Str8
+	"HERE WATCH THIS->Str9
+	9->T
+	prgmTEXTROUT
+	Horizontal ~48
+	Horizontal ~49
+	{40->L1
+	
+	For(E,1,dim(L1
+		L1(E->A
+		~11->B
+		
+		0->S:0->Q
+		Repeat pxl-Test(abs(B)+1,A+1
+			"BOX
+			Line(A+1,B,A+7,B
+			Line(A,B+1,A,B+7
+			Line(A+1,B+8,A+7,B+8
+			Line(A+8,B+1,A+8,B+7
+			"END
+			Line(A,B,A+8,B,0
+			Line(A,B+7,A+8,B+7,0
+			Line(A,B+8,A+8,B+8,0
+			Line(A,B+9,A+8,B+9,0
+			B-3->B
+		End
+		B+8->L2(E
+		"BOX
+		Line(A+1,B,A+7,B
+		Line(A,B+1,A,B+7
+		Line(A+1,B+8,A+7,B+8
+		Line(A+8,B+1,A+8,B+7
+		"END
+		"SHADING
+		Line(A,B+1,A+8,B+1
+		Line(A,B+2,A+8,B+2
+		Line(A,B+3,A+8,B+3
+		For(C,A+2,A+7,2
+			Pt-Off(C,B+2
+		End
+		For(C,A+1,A+7,2
+			Pt-Off(C,B+3
+		End
+		Pt-Off(A,B
+		Pt-Off(A+8,B
+		Pt-Off(A,B+8
+		Pt-Off(A+8,B+8
+		
+		Pt-Off(A,B+9
+		Pt-Off(A+8,B+9
+		
+	End
+	
+	{0->L1
+	Repeat getKey
+	End
+	"SEE THAT BOX FALL?->Str1
+	"THAT IS GRAVITY.HOPEFULLY->Str2
+	"YOU'VE HEARD OF IT->Str3
+	"WELL IT PULLS OBJECTS DOWN->Str4
+	"AT 9.81m/s^^2, m IS METERS->Str5
+	"AND S IS SECONDS->Str6
+	"MEANING v(ELOCITY) GOES->Str7
+	"UP BY 9.81m/s FOR EVERY->Str8
+	"s TRAVELED.->Str9
+	prgmTEXTROUT
+	"HOPEFULLY IM NOT->Str1
+	"CONFUSING YOU!->Str2
+	"THIS WAS FOUND OUT BY->Str3
+	"ISAAC NEWTON, WHEN AN->Str4
+	"APPLE FELL ON HIS HEAD.->Str5
+	"ENOUGH CHIT-CHAT LETS->Str6
+	"GO TO THE LAB AND TRY->Str7
+	"IT FOR OURSELVES->Str8
+	"FOLLOW ME->Str9
+	prgmTEXTROUT
+	"WELCOME TO THE SIMULATOR->Str1
+	"THIS IS WHERE TESTING TAKES->Str2
+	"PLACE, BEFORE ACTUAL->Str3
+	"MISSILE LUANCHES.->Str4
+	"THE FIRST TEST IS SIMPLY->Str5
+	"PRESSING [2ND] TO FIRE->Str6
+	"HOPEFULLY YOU CAN MANAGE->Str7
+	"WELL ILL LET YOU TRY->Str8
+	"IT ON YOUR OWN.->Str9
+End
+
+prgmTEXTROUT
+If I=1:Return
+
+0->S:0->R
+1->U:1->Z
+45->theta:20->V
+" ->Str0
+0->L1(1
+"SPECS
+"X DIS,Y DIS,
+If L>10:Then
+	randInt(20,90->R
+	randInt(0,1
+	If Ans:Then
+		0->Z
+		randInt(10,40->V
+	Else
+		0->U
+		randInt(20,80->theta
+	End
+	"FREEPLAY->Str0
+End
+If L=10:Then
+	0->Z:70->theta
+	20->R
+End
+If L=9:Then
+	0->Z:45->theta
+	80->R
+End
+If L=8:Then
+	0->Z:39->theta
+	52->R
+End
+If L=7:Then
+	0->Z:30->theta
+	75->R
+End
+If L=6:Then
+	"PRESS [2ND]->Str0
+	0->U:0->Z
+	60->theta:32->V
+	90->R
+End
+If L=5:Then
+	"THE ANGLE IS GOOD...->Str0
+	0->Z:70->theta
+	60->R
+End
+If L=4:Then
+	"LINE 'ER UP->Str0
+	0->U:29->V
+	55->R
+End
+If L=1:Then
+	"PRESS [2ND] TO FIRE->Str0
+	0->U:0->Z
+End
+If L=2:Then
+	0->U:0->Z
+	29->V:28->theta
+	71->R
+	"FIRE AWAY!->Str0
+End
+If L=3:Then
+	{48,48,48,48,57,57,57,66,66,75->L1
+	0->U:0->Z
+	46->R
+	30->V:60->theta
+	"FIRE AWAY!->Str0
+End
+
+Horizontal ~48
+Horizontal ~56
+Text(57,1," Equ      Txt       Specs      Help
+Text(57,82,"Quit
+Line(16,~57,16,~62
+Pt-Off(16,~56
+Line(34,~57,34,~62
+Pt-Off(34,~56
+Line(79,~57,79,~62
+Line(59,~57,59,~62
+Pt-Off(59,~56
+Pt-Off(79,~56
+
+If R
+Circle(R,~47+S,2,{[i]
+Pt-On(1,~47,3
+9.81->G
+Text(49,1,"Velocity:
+Text(49,50,"Angle:
+Text(49,33,V
+Text(49,72,theta
+If L1(1
+Then
+	
+	For(E,1,dim(L1
+		L1(E->A
+		~11->B
+		
+		0->S:0->Q
+		Repeat pxl-Test(abs(B)+1,A+1
+			"BOX
+			Line(A+1,B,A+7,B
+			Line(A,B+1,A,B+7
+			Line(A+1,B+8,A+7,B+8
+			Line(A+8,B+1,A+8,B+7
+			"END
+			Line(A,B,A+8,B,0
+			Line(A,B+7,A+8,B+7,0
+			Line(A,B+8,A+8,B+8,0
+			Line(A,B+9,A+8,B+9,0
+			B-3->B
+		End
+		B+8->L2(E
+		"BOX
+		Line(A+1,B,A+7,B
+		Line(A,B+1,A,B+7
+		Line(A+1,B+8,A+7,B+8
+		Line(A+8,B+1,A+8,B+7
+		"END
+		"SHADING
+		Line(A,B+1,A+8,B+1
+		Line(A,B+2,A+8,B+2
+		Line(A,B+3,A+8,B+3
+		For(C,A+2,A+7,2
+			Pt-Off(C,B+2
+		End
+		For(C,A+1,A+7,2
+			Pt-Off(C,B+3
+		End
+		Pt-Off(A,B
+		Pt-Off(A+8,B
+		Pt-Off(A,B+8
+		Pt-Off(A+8,B+8
+		
+		Pt-Off(A,B+9
+		Pt-Off(A+8,B+9
+		
+	End
+	
+End
+Text(0,0,Str0
+0->Q
+Repeat K=21
+	getKey->K
+	Horizontal ~48
+	If K=14:Then
+		StorePic 1
+		
+		"Help->Str0
+		2->T
+		"VELOCITY IS UNLOCKED->Str1
+		"ANGLE IS UNLOCKED->Str2
+		If not(U
+		"VELOCITY IS LOCKED->Str1
+		If not(Z
+		"ANGLE IS LOCKED->Str2
+		If not(U) and not(Z
+		Then
+			"SINCE BOTH ARE LOCKED,->Str3
+			"SIMPLY PRESS [2ND]->Str4
+			"TO FIRE.->Str5
+			5->T
+		End
+		If U and not(Z
+		Then
+			"SINCE ANGLE IS LOCKED->Str3
+			"SOLVE EQUATION FOR->Str4
+			"VELOCITY (V)->Str5
+			5->T
+		End
+		If Z and not(U
+		Then
+			"SINCE VELOCITY IS->Str3
+			"LOCKED, SOLVE ->Str4
+			"THE EQUATION FOR->Str5
+			"ANGLE (theta).->Str6
+			6->T
+		End
+		
+		prgmTEXTROUT
+		
+		RecallPic 1
+	End
+	If K=15:Then
+		21->K
+		1->Q
+	End
+	If K=11:Then
+		StorePic 1
+		
+		"            Equation Sheet->Str0
+		"Distance:->Str1
+		
+		"Height at x:->Str3
+		"h=hplotsquare+xtan(theta)->Str4
+		"-(gx^^2)/2(vcos(theta))^^2->Str5
+		5->T
+		prgmTEXTROUT
+		
+		RecallPic 1
+	End
+	If K=12:Then
+		StorePic 1
+		ClrDraw
+		1->I
+		prgmSHOT
+		RecallPic 1
+	End
+	If K=13:Then
+		StorePic 1
+		
+		" ->Str0
+		ClrDraw
+		prgmTEXTROUT
+		Text(1,2,"Specs
+		Horizontal ~7
+		Text(8,2,"Distance to target:  
+		Text(14,2,R
+		Text(14,15,"meters
+		Text(20,2,"Height off ground:
+		Text(26,2,S
+		Text(26,15,"meters
+		Text(32,2,"Gravity:
+		Text(38,2,"9.81m/s^^2
+		If not(U
+		Then
+			Text(44,2,"Locked velocity:          m/s
+			Text(44,58,V
+		End
+		If not(Z
+		Then
+			Text(50,2,"Locked angle:         ^^o
+			Text(50,49,theta
+		End
+		"Specs->Str0
+		0->T
+		prgmTEXTROUT
+		
+		RecallPic 1
+	End
+	Line(0,~48,94,~48,0
+	If Z
+	theta+((K=25 and theta!=80)-(K=34 and theta!=10)->theta
+	If U
+	V+((K=26 and V!=40)-(K=24 and V!=10)->V
+	If K:Then
+		Text(49,33,"        
+		Text(49,72,"          
+		Text(49,33,V
+		Text(49,72,theta
+	End
+End
+If Q=1:Return
+"Distance
+V^^2sin(2theta)/G->D
+"Time
+D/(Vcos(theta))->T
+
+Pt-On(1,~47,3
+Pt-On(D,~47,3
+Horizontal ~48
+For(U,1,D
+	Utan(theta)-((GU^^2)/(2(Vcos(theta))^^2))->H
+	Pt-On(U,~47+iPart(H),3
+	If pxl-Test(abs(~47+iPart(H)),U+2
+	Then
+		For(E,~47+iPart(H),~47,~1
+			Pt-On(U,E
+			Pt-On(U+1,E
+			0->A
+			Repeat A=5
+				A+1->A
+			End
+		End
+		D->U
+	End
+	If U>=92
+	D->U
+	
+End
+"ACHIEVECHK
+0->T
+"ACHIEVEMENT UNLOCKED->Str0
+If L=1:Then
+	"NOOB->Str1
+	"BEAT THE FIRST LEVEL->Str2
+	"PUSH [MODE] ON MAIN->Str3
+	"MENU TO VIEW ACHIEVEMENTS->Str4
+	4->T
+	1->|LPPA(1
+	prgmTEXTROUT
+End
+If not(|LPPA(5)) and D>94:Then
+	"LUNAR->Str1
+	"SHOOT OFF THE SCREEN->Str2
+	2->T
+	1->|LPPA(5
+End
+If not(|LPPA(4)) and D=R+3 and D<=93 and not(L1(1:Then
+	"OVERFLIGHT->Str1
+	"SHOOT MISSILE TOO FAR->Str2
+	2->T
+	1->|LPPA(4
+	prgmTEXTROUT
+End
+If not(|LPPA(6)) and theta=80:Then
+	"HIGH ANGLE->Str1
+	"SHOOT WITH MAX ANGLE->Str2
+	2->T
+	prgmTEXTROUT
+	1->|LPPA(6
+End
+If not(|LPPA(7)) and V=40:Then
+	"POWERFUL->Str1
+	"SHOOT WITH MAX VEL.->Str2
+	2->T
+	prgmTEXTROUT
+	1->|LPPA(7
+End
+If not(|LPPA(8)) and M=5 and not(N:Then
+	"CRASHER->Str1
+	"LOSE A LEVEL 5 TIMES->Str2
+	2->T
+	prgmTEXTROUT
+End
+
+"LVLCHK
+iPart(D->D
+0
+If L<4:1
+If D=R:1
+If D+3=R:1
+If D+2=R:1
+If D+1=R:1
+If D-1=R:1
+If D-2=R:1
+If D-3=R:1
+Ans->N
+0->T
+If N and L=10:Then
+	"ADVANCED->Str1
+	"BEAT ALL 10 LEVELS->Str2
+	2->T
+	1->|LPPA(2
+End
+If N and L=50:Then
+	"PRO->Str1
+	"BEAT 50 LEVELS->Str2
+	2->T
+	1->|LPPA(3
+End
+If T:prgmTEXTROUT
+
+"FAILED->Str0
+If not(N
+"YOU MISSED THE TARGET->Str1
+If N:Then
+	"Success->Str0
+	"YOU HIT THE TARGET->Str1
+End
+1->T
+prgmTEXTROUT
+If N:Then
+	0->M
+	ClrDraw
+	Horizontal 0
+	Horizontal ~62
+	Vertical 0
+	Vertical 94
+	Pt-Off(0,0
+	Pt-Off(0,~62
+	Pt-Off(94,0
+	Pt-Off(94,~62
+	Text(1,2,"You Beat Mission
+	Text(1,54,L
+	Horizontal ~8
+	L+1->L
+	L->|LPS(1
+	Text(21,15,"Next Level
+	Text(28,15,"Main Menu
+	Text(35,15,"Quit
+	~28->C
+	Repeat K=21
+		getKey->K
+		If not(K
+		Then
+			Line(14,C,51,C
+			Line(13,C+1,13,C+7
+		End
+		C+7(K=25 and C!=~28)-7(K=34 and C!=~42)->C
+		Line(14,C,51,C,0
+		Line(13,C+1,13,C+7,0
+	End
+	If C=~42:Stop
+End

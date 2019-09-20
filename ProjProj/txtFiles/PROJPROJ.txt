@@ -1,0 +1,266 @@
+StoreGDB 1
+8->dim(|LPPA
+Lbl MN
+ClrDraw
+0->Xmin
+94->Xmax
+~62->Ymin
+0->Ymax
+AxesOff
+Degree
+1->dim(|LPS
+If not(|LPS(1
+1->|LPS(1
+
+"Continue->Str1
+"New Game->Str2
+"Lvl Select->Str3
+"Quit Game->Str4
+"          ->Str0
+Text(~1,0,20,"Projectile
+Text(~1,8,25,"Project
+Text(57,2,"Linksoft  Productions  2013
+{5,81->L1
+Horizontal ~54
+Horizontal ~52
+Horizontal ~56
+
+For(E,1,dim(L1
+	L1(E->A
+	~11->B
+	
+	0->S:0->Q
+	Repeat pxl-Test(abs(B)+1,A+1
+		"BOX
+		Line(A+1,B,A+7,B
+		Line(A,B+1,A,B+7
+		Line(A+1,B+8,A+7,B+8
+		Line(A+8,B+1,A+8,B+7
+		"END
+		Line(A,B,A+8,B,0
+		Line(A,B+7,A+8,B+7,0
+		Line(A,B+8,A+8,B+8,0
+		Line(A,B+9,A+8,B+9,0
+		B-3->B
+	End
+	B+8->L2(E
+	"BOX
+	Line(A+1,B,A+7,B
+	Line(A,B+1,A,B+7
+	Line(A+1,B+8,A+7,B+8
+	Line(A+8,B+1,A+8,B+7
+	"END
+	"SHADING
+	Line(A,B+1,A+8,B+1
+	Line(A,B+2,A+8,B+2
+	Line(A,B+3,A+8,B+3
+	For(C,A+2,A+7,2
+		Pt-Off(C,B+2
+	End
+	For(C,A+1,A+7,2
+		Pt-Off(C,B+3
+	End
+	Pt-Off(A,B
+	Pt-Off(A+8,B
+	Pt-Off(A,B+8
+	Pt-Off(A+8,B+8
+	
+	Pt-Off(A,B+9
+	Pt-Off(A+8,B+9
+	
+End
+
+Horizontal ~16
+StorePic 1
+3->T
+Lbl M
+RecallPic 1
+1->S
+
+Text(~1,20,20,Str1
+Text(28,20,Str2
+Text(36,20,Str3
+Text(44,20,Str4
+
+Repeat K=21
+	getKey->K
+	If K=22:Then
+		StorePic 1
+		
+		ClrDraw
+		NAME10
+		"NOOB      ADVANCED  PRO       OVERFLIGHTLUNAR     HIGH ANGLEPOWERFUL  CRASHER   ->Str9
+		For(A,1,8
+			If |LPPA(A
+			"            "+sub(Str9,10A-9,10
+			If not(|LPPA(A
+			"            "+"??????????
+			If A=1:Ans->Str1:If A=2:Ans->Str2:If A=3:Ans->Str3:If A=4:Ans->Str4:If A=5:Ans->Str5:If A=6:Ans->Str6:If A=7:Ans->Str7:If A=8:Ans->Str8
+		End
+		
+		8->T
+		"ACHIEVEMENTS->Str0
+		1->Q
+		prgmTEXTROUT
+		"BEAT THE FIRST LEVEL  BEAT ALL 10 LEVELS    BEAT 50 LEVELS        SHOOT MISSILE TOO FAR SHOOT OFF THE SCREEN  SHOOT WITH MAX ANGLE  SHOOT WITH MAX VEL.   LOSE A LEVEL 5 TIMES  "->Str8
+		~14->A
+		1->C
+		If |LPPA(C
+		Text(56,2,sub(Str8,22C-21,21
+		If not(|LPPA(C
+		Text(56,2,"ACHIEVEMENT LOCKED
+		
+		Repeat K=45
+			getKey->K
+			Line(13,A,52,A
+			Line(12,A+1,12,A+6
+			Horizontal ~56
+			Line(1,~56,93,~56,0
+			If K=25 or K=34:Then
+				Line(13,A,52,A,0
+				Line(12,A+1,12,A+6,0
+				Text(56,1,"                                                                                       "
+			End
+			If K=25 and A!=~14:Then
+				A+6->A
+				C-1->C
+			End
+			If K=34 and A!=~56
+			Then
+				A-6->A
+				C+1->C
+			End
+			If K=25 or K=34:Then
+				If |LPPA(C
+				Text(56,2,sub(Str8,22C-21,21
+				If not(|LPPA(C
+				Text(56,2,"ACHIEVEMENT LOCKED
+			End
+		End
+		
+		ClrDraw
+		"Continue->Str1
+		"New->Str2
+		"Lvl Select->Str3
+		"Quit->Str4
+		"          ->Str0
+		RecallPic 1
+	End
+	Line(0,~16,94,~16,0
+	S+(K=34 and S!=4)-(K=25 and S!=1)->S
+	Horizontal ~16
+	If K:Then
+		Text(~1,20,20,Str0
+		Text(20,20,Str1
+		Text(~1,28,20,Str0
+		Text(28,20,Str2
+		Text(~1,36,20,Str0
+		Text(36,20,Str3
+		Text(~1,44,20,Str0
+		Text(44,20,Str4
+		
+		If S=1
+		Text(~1,20,20,Str1
+		If S=2
+		Text(~1,28,20,Str2
+		If S=3
+		Text(~1,36,20,Str3
+		If S=4
+		Text(~1,44,20,Str4
+		
+	End
+	
+End
+If S=1:Goto G
+If S=4:Then
+	ClrDraw
+	RecallGDB 1
+End
+If S=4:Stop
+If S=2:Then
+	Text(~1,28,20,"        
+	Text(28,20,"New Game
+	StorePic 1
+	For(A,0,~15,~1
+		Line(0,A,94,A,0
+	End
+	Text(~1,0,0,"New Game:
+	Text(~1,7,20,"Yes   No
+	1->T
+	Line(20,~14,37,~14
+	0->K
+	Repeat K=21
+		getKey->K
+		Line(20T,~14,37T,~14
+		If K
+		Line(20T,~14,37T,~14,0
+		If K=24:1->T
+		If K=26:2->T
+		Line(20T,~14,37T,~14,0
+	End
+	If T=1:Then
+		{1->|LPS
+		DelVar |LPPA
+		8->dim(|LPPA
+	End
+	ClrDraw
+End
+If T=2:Goto M
+If T=1:Goto M
+0->T
+If S=3:Then
+	0->K
+	StorePic 1
+	|LPS(1->L
+	For(A,0,~15,~1
+		Line(0,A,94,A,0
+	End
+	Text(~1,0,0,"Choose Level
+	Text(~1,8,70,"<0 >
+	Text(8,0,"Choose '0' For Back
+	0->T
+	0->K
+	Repeat K=21
+		getKey->K
+		If K=26 and T<L:T+1->T
+		If K=24 and T:T-1->T
+		
+		If K=24 or K=26:Then
+			Text(~1,8,70,"<  >
+			Text(~1,8,75,T
+		End
+		
+	End
+	If T:Then
+		|LPS(1->L6(1
+		T->|LPS(1
+		T->L
+		0->I
+		prgmSHOT
+		L6(1->|LPS(1
+		0->T
+		"Continue->Str1
+		"New Game->Str2
+		"Lvl Select->Str3
+		"Quit Game->Str4
+		"                          ->Str0
+	End
+	ClrDraw
+End
+If T=0:Goto M
+
+Lbl G
+
+|LPS(1->L
+0->M
+0->C:0->Q
+While C!=~35 or Q
+	0->I
+	prgmSHOT
+	M+1->M
+End
+If C=~35 or Q
+Goto MN
+ClrDraw
+RecallGDB 1
+" 

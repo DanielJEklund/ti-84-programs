@@ -1,0 +1,53 @@
+If T
+ClrDraw
+If Str0=" 
+Goto D
+"TITLE
+Text(1,2,Str0
+If T>0
+Text(8,2,Str1
+If T>1
+Text(14,2,Str2
+If T>2
+Text(20,2,Str3
+If T>3
+Text(26,2,Str4
+If T>4
+Text(32,2,Str5
+If T>5
+Text(38,2,Str6
+If T>6
+Text(44,2,Str7
+If T>7
+Text(50,2,Str8
+If T>8
+Text(56,2,Str9
+Lbl D
+Horizontal 0
+Horizontal ~62
+Vertical 0
+Vertical 94
+Pt-Off(0,0
+Pt-Off(0,~62
+Pt-Off(94,0
+Pt-Off(94,~62
+Horizontal ~7
+If Q=1 or Str0=" 
+Goto E
+Repeat getKey
+	Horizontal ~7
+	Line(1,~7,93,~7,0
+End
+0->B
+For(A,~62,~31,2
+	Horizontal A
+	Horizontal B
+	B-2->B
+End
+~32->B
+For(A,~31,0
+	Line(0,A,94,A,0
+	Line(0,B,94,B,0
+	B-1->B
+End
+Lbl E
