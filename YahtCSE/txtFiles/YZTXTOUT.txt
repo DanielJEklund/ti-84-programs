@@ -1,0 +1,11 @@
+U->C:V->D
+For(G,1,dim(L6
+	87+L6(G->T
+	If T=85:Then
+		U->C:S+D->D
+	Else
+		real(8,1,1
+		real(4,0,C,D,1,1,0,0,255,1,0,T
+		C+5->C
+	End
+End

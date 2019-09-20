@@ -1,0 +1,518 @@
+:DCS
+"B33333333333333033EEEEEEEEEEEE333E222222222222F33EDBC2222CBD22F33E2CBD22DBC222F33E22BB22BB2222F33E22DBCCBD2222F33E222CBBC22222F33E222DBBD22222F33E2222BB222222F33E2222BB223D32F33E2222BB22D3D2F33E2222BB223D32F33E222222222222F333FFFFFFFFFFFF33033333333333333B"
+"VALUES
+14->dim(|LSCRE
+"MARKED
+14->dim(|LSC
+5->dim(|LHOLD
+5->dim(|LDICE
+Fill(0,|LHOLD
+"SveSt,Nm1,2,3,Sc..
+28->dim(|LYCSE
+If not(|LYCSE(2
+{0,20,18,28,175,20,6,11,200,11,18,13,225,26,5,12,250,4,1,14,275->|LYCSE
+
+real(0,1,1
+
+"YZSPTS
+real(5,0,0
+real(0,3,4,118,0
+real(7,9,0,66,256,54,117,0
+real(8,1,1
+0->A
+For(Y,1,4
+	For(X,1,10
+		If not(A:13->T
+		If A:21->T
+		A->B
+		real(4,0,16X-12,16Y-12,1,1,0,0,255,0,0,T
+		If B:0->A
+		If not(B:1->A
+	End
+	If B:1->A
+	If not(B:0->A
+End
+real(9
+real(8,1,1
+real(7,9,53,24,55,18,255,1
+real(8,1,1
+For(Y,1,4
+	For(X,1,9
+		8X+Y-1->S
+		real(4,0,8X+35,8Y+10,1,1,0,0,255,0,0,S
+	End
+End
+For(X,1,20
+	4->S
+	If X=1:0->S
+	If X=20:1->S
+	real(4,0,8X-8,64,1,1,0,0,255,0,0,S
+End
+real(9
+real(8,1,1
+For(Y,1,7
+	real(4,0,0,8Y+60,1,1,0,0,255,0,0,6
+	real(4,0,152,8Y+60,1,1,0,0,255,0,0,7
+End
+real(9
+Lbl H
+real(8,1,1
+"New Game
+real(6,0,35,76,1,33,0
+"Continue
+real(6,0,35,84,1,33,0
+"Highscores
+real(6,0,35,92,1,33,0
+"Exit
+real(6,0,35,100,1,33,1
+real(8,1,1
+77->A
+Lbl R
+real(4,0,28,A,1,1,0,0,255,1,0,39
+Repeat K=21 or K=105
+	getKey->K
+	If K=25 and A!=77:Then
+		real(8,1,1
+		real(7,9,28,A,8,8,117,0
+		A-8->A
+		real(4,0,28,A,1,1,0,0,255,1,0,39
+	End
+	If K=34 and A!=101:Then
+		real(8,1,1
+		real(7,9,28,A,8,8,117,0
+		A+8->A
+		real(4,0,28,A,1,1,0,0,255,1,0,39
+	End
+End
+real(8,1,1
+1->R
+0->|LYCSE(22
+If A=85 and |LYCSE(1:Then
+	0->R:0->|LYCSE(1
+	1->|LYCSE(22
+End
+If A=77:Then
+	0->R:0->|LYCSE(1
+	Fill(0,|LSC
+	Fill(0,|LSCRE
+End
+If A=101:Stop
+If A=93:Then
+	93->W
+	real(8,1,1
+	real(7,9,2,66,152,54,117,1
+	real(8,1,1
+	68->V:45->U:8->S
+	{32,~2,31,~2,30,~2,29,~2,28->L6
+	prgmYZTXTOUT
+	68->V:55->U:8->S
+	DelVar L6
+	20->dim(L6
+	For(L,2,21
+		If L=5 or L=9 or L=13 or L=17 or L=21:Then
+			~2->L6(L-1
+		Else
+			|LYCSE(L->L6(L-1
+		End
+	End
+	prgmYZTXTOUT
+	8.9->B:1.5->A
+	For(L,1,5
+		|LYCSE(4L+1->T
+		prgmPUTSCRE
+		B+1->B
+	End
+	{16,21,19,8,~1,1,14,25,~1,11,5,25->L6
+	111->V:46->U
+	prgmYZTXTOUT
+Repeat getKey:End
+	W->A
+	real(8,1,1
+	real(7,9,2,66,152,54,117,1
+End
+If A=93:Goto H
+If R:Goto R
+
+real(0,3,4,118,0
+real(7,9,0,66,256,54,117,1
+real(8,1,1
+
+For(X,1,20
+	4->S
+	If X=1:0->S
+	If X=20:1->S
+	real(4,0,8X-8,64,1,1,0,0,255,0,0,S
+End
+real(9
+real(8,1,1
+For(Y,1,7
+	real(4,0,0,8Y+60,1,1,0,0,255,0,0,6
+	real(4,0,152,8Y+60,1,1,0,0,255,0,0,7
+End
+real(9
+real(8,1,1
+
+real(7,9,10,3,140,59,255,1
+real(8,1,1
+"MES L6
+{15,14,5,19,~2,20,23,15,19,~2,20,8,18,5,5,19,~2,6,15,21,18,19,~2,6,9,22,5,19,~2,19,9,24,5,19,~2,2,15,14,21,19->L6
+"X:Y:S
+19->U:5->V:8->S
+prgmYZTXTOUT
+{30,~1,15,6,~1,1,~1,11,9,14,4,~2,31,~1,15,6,~1,1,~1,11,9,14,4,~2,6,21,12,12,~1,8,15,21,19,5,~2,19,13,~1,19,20,18,1,9,7,8,20,~2,12,7,~1,19,20,18,1,9,7,8,20,~2,3,8,1,14,3,5,~2,25,1,8,20,26,5,5->L6
+76->U
+prgmYZTXTOUT
+real(8,1,1
+real(7,7,9,3,141,58,1,1
+For(X,1,2
+	real(8,1,1
+	real(7,5,14X+37,4,14X+37,59,1,0
+	real(7,5,14X+121,4,14X+121,59,1,1
+End
+real(8,1,1
+real(7,5,10,61,149,61,1,0
+real(7,5,150,4,150,61,1,1
+real(8,1,1
+For(Y,1,6
+	real(7,5,9,8Y+3,150,8Y+3,1,0
+End
+real(9
+real(8,1,1
+If |LYCSE(22:Then
+	0->|LYCSE(22
+	1->A
+	For(Y,1,7
+		Y->B:|LSCRE(Y->T
+		If |LSC(Y:prgmPUTSCRE
+	End
+	2->A
+	For(Y,8,14
+		Y-7->B:|LSCRE(Y->T
+		If |LSC(Y:prgmPUTSCRE
+	End
+End
+0->Q
+Repeat Q
+	0->R
+	real(8,1,1
+	real(7,9,14,75,11+24*5,8,117,1
+	real(8,1,1
+	Repeat R=3 or min(|LHOLD) or Q
+		14->A:86->B
+		For(G,1,5
+			If not(|LHOLD(G:Then
+				real(8,1,1
+				"A:X,B:Y,C:N
+				randInt(1,6->C
+				C->|LDICE(G
+				For(Y,1,3
+					For(X,1,3
+						If Y=1:Then
+							0->S
+							If X=3:1->S
+							If X=2:4->S
+						End
+						If Y=2:Then
+							23->S
+							If X=1:6->S
+							If X=3:7->S
+						End
+						If Y=3:Then
+							5->S
+							If X=1:2->S
+							If X=3:3->S
+						End
+						real(4,0,8X+A-8,8Y+B-8,1,1,0,0,255,0,0,S
+					End
+				End
+				real(8,1,1
+				real(7,9,A+2,B+2,20,20,255,1
+				real(8,1,1
+				If C=1 or C=3 or C=5
+				real(4,0,A+8,B+8,1,1,0,0,1,0,0,15
+				If C!=1:Then
+					real(4,0,A+2,B+2,1,1,0,0,1,0,0,15
+					real(4,0,A+14,B+14,1,1,0,0,1,0,0,15
+				End
+				If C>3:Then
+					real(4,0,A+14,B+2,1,1,0,0,1,0,0,15
+					real(4,0,A+2,B+14,1,1,0,0,1,0,0,15
+				End
+				If C=6:Then
+					real(4,0,A+2,B+8,1,1,0,0,1,0,0,15
+					real(4,0,A+14,B+8,1,1,0,0,1,0,0,15
+				End
+				real(9
+			End
+			A+27->A
+		End
+		{18,15,12,12,~1,28+R->L6
+		113->V:67->U
+		real(8,1,1
+		real(7,9,U+24,V,8,8,117,1
+		prgmYZTXTOUT
+		real(8,1,1
+		1->W
+		Repeat K=105
+			getKey->K
+			If K>10 and K<16:Then
+				K-10->K
+				K->W
+				If |LHOLD(K:0->N
+				If not(|LHOLD(K:1->N
+				N->|LHOLD(K
+				If N:Then
+					For(X,1,3
+						If X=1:12->S
+						If X=2:20->S
+						If X=3:28->S
+						real(4,0,27W-21+8X,B-11,1,1,0,0,255,0,0,S
+					End
+					real(9
+					real(8,1,1
+				End
+				If not(N:Then
+					real(7,9,27W-13,B-11,24,8,117,1
+					real(8,1,1
+				End
+			End
+		End
+		R+1->R
+	End
+	
+	1->A:1->B
+	1->C
+	real(8,1,1
+	real(4,0,8A+4,8B+5-8,1,1,0,0,255,1,0,39
+	real(8,1,1
+	Repeat Q or (K=21 and (|LSC(C
+		getKey->K
+		If K=45:1->Q
+		If K=24 and A!=1 and B!=7:Then
+			real(7,9,58A+3-50,8B+4-8,7,7,255,0
+			A-1->A:C-7->C
+			real(4,0,58A+4-50,8B+5-8,1,1,0,0,255,1,0,39
+			real(8,1,1
+		End
+		If K=26 and A!=2:Then
+			real(7,9,58A+3-50,8B+4-8,7,7,255,0
+			A+1->A:C+7->C
+			real(4,0,58A+4-50,8B+5-8,1,1,0,0,255,1,0,39
+			real(8,1,1
+		End
+		If K=25 and B!=1:Then
+			real(7,9,58A+3-50,8B+4-8,7,7,255,0
+			B-1->B:C-1->C
+			real(4,0,58A+4-50,8B+5-8,1,1,0,0,255,1,0,39
+			real(8,1,1
+		End
+		If K=34 and ((A=1 and B!=6) or (A=2 and B!=7))
+		Then
+			real(7,9,58A+3-50,8B+4-8,7,7,255,0
+			B+1->B:C+1->C
+			real(4,0,58A+4-50,8B+5-8,1,1,0,0,255,1,0,39
+			real(8,1,1
+		End
+		If K=21 and |LSC(C:0->K
+		If K=21 and not(|LSC(C:Then
+			
+			5->dim(|LBKUP
+			|LDICE->|LBKUP
+			0->T:0->W
+			If C=10:Then
+				SortA(|LDICE
+				|LDICE(1->D:|LDICE(2->E
+				|LDICE(3->F:|LDICE(4->G
+				|LDICE(5->H
+				If D=E and E=F and G=H:25->T
+				If H=G and G=F and D=E:25->T
+			End
+			If C=9:Then
+				SortA(|LDICE
+				If |LDICE(1)=|LDICE(2) and |LDICE(2)=|LDICE(3) and |LDICE(3)=|LDICE(4:4|LDICE(2->T
+				If |LDICE(2)=|LDICE(3) and |LDICE(3)=|LDICE(4) and |LDICE(4)=|LDICE(5:4|LDICE(2->T
+			End
+			If C=8:Then
+				SortA(|LDICE
+				If |LDICE(1)=|LDICE(2) and |LDICE(2)=|LDICE(3:3|LDICE(1->T
+				If |LDICE(2)=|LDICE(3) and |LDICE(3)=|LDICE(4:3|LDICE(2->T
+				If |LDICE(3)=|LDICE(4) and |LDICE(4)=|LDICE(5:3|LDICE(3->T
+			End
+			If A=1:Then
+				For(L,1,5
+					If C=|LDICE(L
+					T+|LDICE(L->T
+				End
+			End
+			If C=13:Then
+				For(L,1,5
+					T+|LDICE(L->T
+				End
+			End
+			If C=11:Then
+				SortA(|LDICE
+				For(L,2,5
+					If |LDICE(L)=|LDICE(L-1
+					8->|LDICE(L
+				End
+				SortA(|LDICE
+				If |LDICE(1)!=|LDICE(2)-1
+				8->|LDICE(1
+				SortA(|LDICE
+				If |LDICE(1)=|LDICE(2)-1 and |LDICE(2)=|LDICE(3)-1 and |LDICE(3)=|LDICE(4)-1:30->T
+				If |LDICE(2)=|LDICE(3)-1 and |LDICE(3)=|LDICE(4)-1 and |LDICE(4)=|LDICE(5)-1:30->T
+			End
+			If C=12:Then
+				SortA(|LDICE
+				For(L,2,5
+					If |LDICE(L)=|LDICE(L-1
+					8->|LDICE(L
+				End
+				SortA(|LDICE
+				If |LDICE(1)!=|LDICE(2)-1
+				8->|LDICE(1
+				SortA(|LDICE
+				If |LDICE(1)=|LDICE(2)-1 and |LDICE(2)=|LDICE(3)-1 and |LDICE(3)=|LDICE(4)-1 and |LDICE(4)=|LDICE(5)-1:40->T
+			End
+			If C=14 and |LDICE(1)=|LDICE(2) and |LDICE(2)=|LDICE(3) and |LDICE(3)=|LDICE(4) and |LDICE(4)=|LDICE(5:Then
+				50+50|LSC(C->T
+				|LSC(C)+1->|LSC(C
+			End
+			1->|LSC(C
+			T->|LSCRE(C
+			If |LSC(1) and |LSC(2) and |LSC(3) and |LSC(4) and |LSC(5) and |LSC(6) and not(|LSC(7:Then
+				T->W:0->theta
+				For(L,1,6
+					theta+|LSCRE(L->theta
+				End
+				If theta>=63:35->T
+				If theta<63:0->T
+				B->O
+				7->B
+				1->|LSC(7
+				prgmPUTSCRE
+				W->T:O->B
+			End
+			|LBKUP->|LDICE
+			DelVar |LBKUP
+			1->P
+			For(L,1,14
+				If L!=7 and not(|LSCRE(L:0->P
+			End
+			P->Q
+			prgmPUTSCRE
+			1->Q
+			For(L,1,14
+				If not(|LSC(L:0->Q
+			End
+			
+		End
+	End
+	real(7,9,58A+3-50,8B+4-8,7,7,255,1
+	real(8,1,1
+	If K=45:1->Q
+	
+	If not(Q
+	prgmPUTSCRE
+	Fill(0,|LDICE
+	Fill(0,|LHOLD
+End
+If K=45:1->|LYCSE(1
+If K!=45:Then
+	0->T
+	For(L,1,14
+		T+|LSCRE(L->T
+	End
+	0->N
+	6->dim(|LTEMP
+	For(L,1,5
+		If T>|LYCSE(4L+1
+		N+1->N
+		|LYCSE(4L+1->|LTEMP(L
+	End
+	|LYCSE(17->F
+	real(8,1,1
+	real(7,9,2,66,145,54,117,1
+	real(8,1,1
+	T->|LTEMP(6
+	T->theta
+	SortA(|LTEMP
+	If N:Then
+		For(L,1,5
+			|LTEMP(L+1->|LYCSE(4L+1
+		End
+	End
+	DelVar |LTEMP
+	If N:Then
+		{8,9,7,8,~1,19,3,15,18,5->L6
+		38->U:70->V:0->S
+		prgmYZTXTOUT
+	End
+	{25,15,21,~1,19,3,15,18,5,4,~1,~1,~1,~1,~1,16,15,9,14,20,19->L6
+	38->U:77->V:0->S
+	prgmYZTXTOUT
+	1.55->A:10->B
+	theta->T
+	prgmPUTSCRE
+	If N:Then
+		
+		4->dim(|LTEMP
+		{1,1,1,0->|LTEMP
+		1->C
+		95->Y:65->X
+		real(8,1,1
+		"DispA
+		real(9
+		real(8,1,1
+		For(L,1,3
+			"A
+			real(6,0,X+8L-8,Y,1,33,0
+		End
+		real(4,0,X+8C-7,Y+8,1,1,0,0,255,0,0,36
+		real(9
+		real(8,1,1
+		3->dim(|LTMP
+		Repeat C=4
+			getKey->K
+			If K=21:Then
+				real(7,9,X+8C-7,Y+8,8,8,117,0
+				|LYCSE(4N-3+C->|LTMP(C
+				|LTEMP(C->|LYCSE(4N-3+C
+				C+1->C
+				real(4,0,X+8C-7,Y+8,1,1,0,0,255,1,0,36
+				real(8,1,1
+			End
+			If K=25 and |LTEMP(C)<=25
+			Then
+				real(7,9,X+8C-8,Y,8,8,117,0
+				|LTEMP(C)+1->|LTEMP(C
+			End
+			If K=34 and |LTEMP(C)>=2
+			Then
+				real(7,9,X+8C-8,Y,8,8,117,0
+				|LTEMP(C)-1->|LTEMP(C
+			End
+			If K=25 or K=34:Then
+				sub("ABCDEFGHIJKLMNOPQRSTUVWXYZ",|LTEMP(C),1
+				real(6,0,X+8C-8,Y,1,33,1
+				real(8,1,1
+			End
+			
+		End
+		If N>1:Then
+			For(L,1,N-1
+				L+1->A
+				|LYCSE(4A-2->|LYCSE(4L-2
+				|LYCSE(4A-1->|LYCSE(4L-1
+				|LYCSE(4A->|LYCSE(4L
+			End
+			N-1->N
+			|LTMP(1->|LYCSE(4N-2
+			|LTMP(2->|LYCSE(4N-1
+			|LTMP(3->|LYCSE(4N
+		End
+		
+	End
+	Repeat getKey
+	End
+End
