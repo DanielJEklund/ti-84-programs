@@ -42,5 +42,5 @@ Supported Operations:
 Any questions/comments? Want to use my code? 
 Feel free to email or pm to the following:
 PM: zeldaking@cemetech.net or zeldaking@omnimaga.org
-Email (no spamming please): dannycraze@gmail.com
+Email (no spamming please): daniel.g.thacker@gmail.com
 Thanks! Daniel Thacker, linksoft 2013
