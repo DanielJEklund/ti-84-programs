@@ -25,18 +25,21 @@ Horizontal ~54
 Horizontal ~52
 Horizontal ~56
 
+"For each object in L1
 For(E,1,dim(L1
+	"X coord for object
 	L1(E->A
 	~11->B
 	
 	0->S:0->Q
 	Repeat pxl-Test(abs(B)+1,A+1
-		"BOX
+		"Repeat till hit pixel
+		"Draw Box
 		Line(A+1,B,A+7,B
 		Line(A,B+1,A,B+7
 		Line(A+1,B+8,A+7,B+8
 		Line(A+8,B+1,A+8,B+7
-		"END
+		"Erase box
 		Line(A,B,A+8,B,0
 		Line(A,B+7,A+8,B+7,0
 		Line(A,B+8,A+8,B+8,0
@@ -44,13 +47,13 @@ For(E,1,dim(L1
 		B-3->B
 	End
 	B+8->L2(E
-	"BOX
+	"Draw Box after hit
+	"Box
 	Line(A+1,B,A+7,B
 	Line(A,B+1,A,B+7
 	Line(A+1,B+8,A+7,B+8
 	Line(A+8,B+1,A+8,B+7
-	"END
-	"SHADING
+	"Shading
 	Line(A,B+1,A+8,B+1
 	Line(A,B+2,A+8,B+2
 	Line(A,B+3,A+8,B+3
